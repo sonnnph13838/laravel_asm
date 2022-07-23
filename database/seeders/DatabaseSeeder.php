@@ -358,12 +358,6 @@ class DatabaseSeeder extends Seeder
             DB::table('service')->insert($services);
             DB::table('contact')->insert($contacts);
             DB::table('blog')->insert($blogs);
-            DB::table('users')->insert([
-                'name' => "Poly",
-                'email' => 'poly@gmail.com',
-                'password' => Hash::make('123456'),
-                'id_role' => 1
-            ]);
         }
     }
 }
