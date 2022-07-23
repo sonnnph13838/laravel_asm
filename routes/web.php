@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/tuyen', 'HomeController@index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'HomeController@index')->name('Home');
+Route::get('/room', 'RoomController@index')->name('Kind_of_room');
+Route::get('blog', 'BlogController@index')->name('Blog');
+Route::get('contact', 'ContactController@index')->name('Contact');
+Route::get('about', 'AboutController@index')->name('About');
