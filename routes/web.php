@@ -21,3 +21,8 @@ Route::get('/room', 'RoomController@index')->name('Kind_of_room');
 Route::get('blog', 'BlogController@index')->name('Blog');
 Route::get('contact', 'ContactController@index')->name('Contact');
 Route::get('about', 'AboutController@index')->name('About');
+
+
+
+//admin
+Route::get('/admin', 'AdminController@index')->name('Admin');

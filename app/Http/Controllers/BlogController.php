@@ -15,7 +15,6 @@ class BlogController extends Controller
     public function index()
     {
         $opjBlog = new Blog();
-
         $this->v['blog'] = $opjBlog->loadListBlog();
         return view('client.blog', $this->v);
     }

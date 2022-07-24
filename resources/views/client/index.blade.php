@@ -81,7 +81,7 @@
 			<div class="slide slide--current parallax-top">
 				<figure class="slide__figure">
 					<div class="slide__figure-inner">
-						<div class="slide__figure-img" style="background-image: url(img/1.jpg)"></div>
+						<div class="slide__figure-img" style="background-image: url({{asset('img/banners/banner1.jpg')}})"></div>
 						<div class="slide__figure-reveal"></div>
 					</div>
 				</figure>
@@ -89,7 +89,7 @@
 			<div class="slide parallax-top">
 				<figure class="slide__figure">
 					<div class="slide__figure-inner">
-						<div class="slide__figure-img" style="background-image: url(img/2.jpg)"></div>
+						<div class="slide__figure-img" style="background-image: url({{asset('img/banners/banner2.jpg')}})"></div>
 						<div class="slide__figure-reveal"></div>
 					</div>
 				</figure>
@@ -97,7 +97,23 @@
 			<div class="slide parallax-top">
 				<figure class="slide__figure">
 					<div class="slide__figure-inner">
-						<div class="slide__figure-img" style="background-image: url(img/3.jpg)"></div>
+						<div class="slide__figure-img" style="background-image: url({{asset('img/banners/banner3.jpg')}})"></div>
+						<div class="slide__figure-reveal"></div>
+					</div>
+				</figure>
+			</div>
+			<div class="slide parallax-top">
+				<figure class="slide__figure">
+					<div class="slide__figure-inner">
+						<div class="slide__figure-img" style="background-image: url({{asset('img/banners/banner4.jpg')}})"></div>
+						<div class="slide__figure-reveal"></div>
+					</div>
+				</figure>
+			</div>
+			<div class="slide parallax-top">
+				<figure class="slide__figure">
+					<div class="slide__figure-inner">
+						<div class="slide__figure-img" style="background-image: url({{asset('img/banners/banner5.jpg')}})"></div>
 						<div class="slide__figure-reveal"></div>
 					</div>
 				</figure>
@@ -146,14 +162,14 @@
 					<div class="row justify-content-center">
 						<div class="col-10">
 							<div class="subtitle text-center mb-4">hotel Thalia</div>
-							<h2 class="text-center">Here is a tribute to good life!</h2>
+							<h2 class="text-center">Nơi mang đến cho bạn một cuộc sống trong mơ.</h2>
 							<p class="text-center mt-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 mt-4 mt-md-0">
 					<div class="img-wrap">
-						<img src="img/rooms.png" alt="">
+						<img src="{{asset('img/home1.png')}}" alt="">
 					</div>
 				</div>
 			</div>
@@ -165,14 +181,14 @@
 			<div class="row mx-0">
 				<div class="col-xl-6 px-0">
 					<div class="img-wrap" id="rev-1">
-						<img src="img/room1.jpg" alt="">
-						<div class="text-element-over">private pool suite</div>
+						<img src="{{asset('img/home2.jpg')}}" alt="">
+						<div class="text-element-over">Phòng Có Bể Bơi</div>
 					</div>
 				</div>
 				<div class="col-xl-6 px-0 mt-4 mt-xl-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-10 col-xl-8 text-center">
-							<h3 class="text-center">Private pool suite</h3>
+							<h3 class="text-center">Phòng Có Bể Bơi</h3>
 							<p class="text-center mt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
 							<a class="mt-5 btn btn-primary" href="search.html">check availability</a>
 						</div>	
@@ -183,7 +199,7 @@
 				<div class="col-xl-6 px-0 mt-4 mt-xl-0 pb-5 pb-xl-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-10 col-xl-8 text-center">
-							<h3 class="text-center">Sea view suite</h3>
+							<h3 class="text-center">Phòng Có View Biển</h3>
 							<p class="text-center mt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
 							<a class="mt-5 btn btn-primary" href="search.html">check availability</a>
 						</div>	
@@ -191,8 +207,8 @@
 				</div>
 				<div class="col-xl-6 px-0 order-first order-xl-last mt-5 mt-xl-0">
 					<div class="img-wrap" id="rev-2">
-						<img src="img/room2.jpg" alt="">
-						<div class="text-element-over">sea view suite</div>
+						<img src="{{asset('img/home3.jpg')}}" alt="">
+						<div class="text-element-over">Phòng Có View Biển</div>
 					</div>
 				</div>
 			</div>
