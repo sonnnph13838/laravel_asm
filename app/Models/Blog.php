@@ -10,21 +10,12 @@ class Blog extends Model
 {
     use HasFactory;
     protected $table = "blog";
-    protected $fillable = ['id', 'name', 'email'];
-    // public function loadList($param = [])
-    // {
-    //     $query = DB::table($this->table)
-    //         ->select($this->fillable)
-    //         ->where('id', '>', 2);
-
-    //     $lists = $query->get();
-    //     return $lists;
-    // }
-    public function loadListWithPager($param = [])
+    protected $fillable = ['id', 'title', 'image1', 'image2', 'image3', 'discription', 'content', 'content1'];
+    public function loadListBlog($param = [])
     {
         $query = DB::table($this->table)
             ->select($this->fillable);
-        $lists = $query->paginate(8);
+        $lists = $query->paginate(6);
         return $lists;
     }
 }

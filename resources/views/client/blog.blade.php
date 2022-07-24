@@ -27,96 +27,24 @@
 					<h3 class="text-center padding-bottom-small">latest news</h3>
 				</div>
 				<div class="section clearfix"></div>
-				<div class="col-md-6 col-xl-4">
-					<div class="room-box background-white">
-						<img src="img/blog/1.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">WE WANT TO SHARE WITH YOU OUR MOOD</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
+				 @foreach ($blog as $item)
+                        <div class="col-md-6 col-xl-4">
+							<div class="room-box background-white">
+								<img src="{{ asset('img/blog/bv11.jpg')}}" alt="">
+								<div class="room-box-in">
+									<h6 class="">{{$item->title}}</h6>
+									<p class="mt-3">{{$item->discription}}</p>
+									<a class="mt-1 btn btn-primary" href="post.html">read more</a>
+									<div class="room-icons news-tags mt-4 pt-4">
+										<a href="#">luxury</a>
+										<a href="#">vacation</a>
+										<a href="#">travel</a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4 mt-4 mt-md-0">
-					<div class="room-box background-white">
-						<img src="img/blog/2.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">SLEEP, CODE, EAT, TRAVEL. REPEAT.</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4 mt-4 mt-xl-0">
-					<div class="room-box background-white">
-						<img src="img/blog/3.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">THE GOLDEN RULE OF WEBDESIGN.</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4 mt-4">
-					<div class="room-box background-white">
-						<img src="img/blog/4.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">PRETTY MUCH HOW YOU'LL SEE IT.</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4 mt-4">
-					<div class="room-box background-white">
-						<img src="img/blog/5.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">FORM AND CONTENT TOGETHER.</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4 mt-4">
-					<div class="room-box background-white">
-						<img src="img/blog/6.jpg" alt="">
-						<div class="room-box-in">
-							<h6 class="">DON´T GIVE UP, KEEP ON FOCUS.</h6>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="post.html">read more</a>
-							<div class="room-icons news-tags mt-4 pt-4">
-								<a href="#">luxury</a>
-								<a href="#">vacation</a>
-								<a href="#">travel</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+				
 			</div>
 		</div>	
 	</div>
