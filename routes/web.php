@@ -26,3 +26,4 @@ Route::get('about', 'AboutController@index')->name('About');
 
 //admin
 Route::get('/admin', 'AdminController@index')->name('Admin');
+Route::match(['get', 'post'], '/admin/add', 'Kind_of_roomController@add')->name('route_BackEnd_User_Add');

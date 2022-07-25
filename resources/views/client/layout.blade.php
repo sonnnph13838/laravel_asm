@@ -38,10 +38,11 @@
 
     <!-- Web Fonts 
 	================================================== -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- CSS
 	================================================== -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}" />
@@ -91,15 +92,14 @@
                     <div class="col-6 px-0 px-md-3 py-3 text-right">
                         <a href="#" class="social-top">fb</a>
                         <a href="#" class="social-top">tw</a>
-                        <div class="lang-wrap">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tài Khoản
-                            </a>
-                            <ul class="dropdown-menu" >
-                                <li style="width:50px"><a style="width:50px"  href="#">Đăng nhập</a></li>
-                                <li style="width:50px"><a style="width:50px"  href="#">Đăng Kí</a></li>
-                            </ul>      
-                        </div>
+                        <div class="lang-wrap" style="text-align: center; width:100px">
+							Tài Khoản
+							<ul>
+								<li><a href="#">Đăng Nhập</a></li>
+								<li><a href="#">Đăng Kí</a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</div>
                     </div>
                 </div>
             </div>
