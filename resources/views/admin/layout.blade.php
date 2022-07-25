@@ -215,13 +215,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="{{route('List_kind_of_room')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{{route('Kind_of_room_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>
@@ -238,13 +238,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
+                <a href="{{route('List_room')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="{{route('Room_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>

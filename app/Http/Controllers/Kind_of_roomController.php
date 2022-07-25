@@ -17,12 +17,14 @@ class Kind_of_roomController extends Controller
     }
     public function index()
     {
-        return view("kind_of_room.index");
+        $opj = new Kind_of_room();
+        $this->v['list_kind_of_room'] = $opj->loadList();
+        return view("admin/kind_of_room.index", $this->v);
     }
     public function add(Request $request)
     {
 
-        $method_route = 'route_BackEnd_User_Add';
+        $method_route = 'route_BackEnd_Kind_of_room_add';
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();
@@ -30,12 +32,12 @@ class Kind_of_roomController extends Controller
             $modelTest = new Kind_of_room();
             $res = $modelTest->saveNew($param);
             if ($res = null) {
-                return Redirect::to('admin/add');
+                return redirect()->route($method_route);
             } elseif ($res > 0) {
                 Session::flash('success', 'Them moi thanh cong');
             } else {
                 Session::flash('error', 'Loi them moi nguoi dung');
-                return Redirect::to('admin/add');
+                return redirect()->route($method_route);
             }
         }
         return view("admin/Kind_of_room.add", $this->v);

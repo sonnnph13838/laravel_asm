@@ -100,13 +100,23 @@
                                 @csrf
                                 <div class="col-6 offset-3">
                                     <div class="form-group">
-                                        <label for="">Tên Loại Phòng<span class="text-danger">(*)</span></label>
+                                        <label for="">Tên Phòng<span class="text-danger">(*)</span></label>
                                         <input type="text" name="name" class="form-control" id="name" value="@isset($request['name']){{ $request['name'] }}@endisset">
                                     </div>
                                     <br>
                                     <div class="form-group">
+                                        <label for="">Giá<span class="text-danger">(*)</span></label>
+                                        <input type="text" name="price" class="form-control" id="price" value="@isset($request['price']){{ $request['price'] }}@endisset">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="">Mô Tả<span class="text-danger">(*)</span></label>
+                                        <input type="text" name="discription" class="form-control" id="name" value="@isset($request['discription']){{ $request['discription'] }}@endisset">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
                                         <div class="form-check">
-                                            <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
+                                            <input class="form-check-input" id="show_menu" name="status" value="1" type="checkbox">
                                             <label class="form-check-label" for="show_menu">Hiển thị menu</label>
                                         </div>
                                     </div>

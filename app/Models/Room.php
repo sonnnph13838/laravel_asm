@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Kind_of_room extends Model
+class Room extends Model
 {
     use HasFactory;
-    protected $table = "kind_of_room";
-    protected $fillable = ['id', 'name', 'status'];
+    protected $table = "room";
+    protected $fillable = ['id', 'name', 'price', 'status', 'discription'];
     // public function loadList($param = [])
     // {
     //     $query = DB::table($this->table)
