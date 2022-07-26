@@ -10,7 +10,7 @@ class Kind_of_room extends Model
 {
     use HasFactory;
     protected $table = "kind_of_room";
-    protected $fillable = ['id', 'name', 'status'];
+    protected $fillable = ['id', 'name', 'status', 'created_at', 'updated_at'];
     // public function loadList($param = [])
     // {
     //     $query = DB::table($this->table)

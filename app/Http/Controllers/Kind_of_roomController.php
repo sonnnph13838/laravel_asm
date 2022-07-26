@@ -24,7 +24,7 @@ class Kind_of_roomController extends Controller
     public function add(Request $request)
     {
 
-        $method_route = 'route_BackEnd_Kind_of_room_add';
+        $method_route = 'Kind_of_room_add';
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();

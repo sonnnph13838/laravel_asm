@@ -45,11 +45,12 @@
                                 {{-- <td>{{$item->created_at}}</td>
                                 <td>{{$item->updated_at}}</td> --}}
                                 <td>{{ $item->status == 1 ? "Có" : "Không" }}</td>
+                                <td>{{ $item->created_at }}</td>
+                                <td>{{ $item->updated_at }}</td>
                                 <td>
                                     <a href="" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-
                                     <a href=""  class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>

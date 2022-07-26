@@ -29,22 +29,29 @@
                             <table class="table tabl-stripped">
                                 <thead>
                                     <th>STT</th>
-                                    <th>Loại Phòng</th>
-                                    <th>Trạng Thái</th>
+                                    <th>Tên Phòng</th>
+                                    <th>Price</th>
+                                    <th>Discription</th>
+                                    <th>Features</th>
+                                    <th>Status</th>
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
-                                        <a href="{{route('Kind_of_room_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
+                                        <a href="{{route('Room_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
                                     </th>
                                 </thead>
                                 <tbody>
-                                   @foreach ($list_kind_of_room as $index =>$item)
+                                   @foreach ($list_room as $index =>$item)
                                         <tr>
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
-                                {{-- <td>{{$item->created_at}}</td>
-                                <td>{{$item->updated_at}}</td> --}}
-                                <td>{{ $item->status == 1 ? "Có" : "Không" }}</td>
+                                <td>{{$item->price}}</td>
+                                <td>{{$item->discription}}</td>
+                                <td>{{$item->features}}</td>
+                                <td>{{$item->status == 1 ? "Có" : "Không" }}</td>
+                                <td>{{$item->created_at}}</td>
+                                <td>{{$item->updated_at}}</td>
+                                
                                 <td>
                                     <a href="" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
@@ -67,7 +74,7 @@
             <!-- /.content -->
         </div>
         <div class="text-center">
-            {{$list_kind_of_room->links()}}
+            {{$list_room->links()}}
         </div>
         <!-- /.content-wrapper -->
     </div>
