@@ -122,7 +122,7 @@
                                     <br>
                                     <div class="form-group">
                                         <label for="">Mô Tả<span class="text-danger">(*)</span></label>
-                                        <input type="text" name="discription" class="form-control" id="name" value="@isset($request['discription']){{ $request['discription'] }}@endisset">
+                                        <input type="text" name="description" class="form-control" id="name" value="@isset($request['description']){{ $request['description'] }}@endisset">
                                     </div>
                                     <br>
                                     <div class="form-group">

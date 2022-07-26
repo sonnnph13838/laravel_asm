@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
-            $table->string('discription');
+            $table->string('description');
             $table->string('room_service');
             $table->string('features');
             $table->integer('id_kind_of_room');

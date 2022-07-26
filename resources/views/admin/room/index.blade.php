@@ -46,7 +46,7 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->price}}</td>
-                                <td>{{$item->discription}}</td>
+                                <td>{{$item->description}}</td>
                                 <td>{{$item->features}}</td>
                                 <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
                                 <td>{{$item->created_at}}</td>
