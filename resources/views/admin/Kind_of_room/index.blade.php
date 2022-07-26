@@ -34,7 +34,7 @@
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
-                                        <a href="{{route('Kind_of_room_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
+                                        <a href="{{route('kind_of_room_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
                                     </th>
                                 </thead>
                                 <tbody>

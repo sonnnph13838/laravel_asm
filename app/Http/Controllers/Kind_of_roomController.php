@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kind_of_room;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Http\Request;
+use App\Http\Requests\Kind_of_roomRequest;
 use Illuminate\Support\Facades\Redirect;
 
 class Kind_of_roomController extends Controller
@@ -21,7 +21,7 @@ class Kind_of_roomController extends Controller
         $this->v['list_kind_of_room'] = $opj->loadList();
         return view("admin/kind_of_room.index", $this->v);
     }
-    public function add(Request $request)
+    public function add(Kind_of_roomRequest $request)
     {
 
         $method_route = 'Kind_of_room_add';
@@ -41,5 +41,12 @@ class Kind_of_roomController extends Controller
             }
         }
         return view("admin/Kind_of_room.add", $this->v);
+    }
+    public function edit($id)
+    {
+        $tests = new Kind_of_room();
+        $objItem = $tests->loadOne($id);
+        $this->v['objItem'] = $objItem;
+        return view("admin/Kind_of_room.edit", $this->v);
     }
 }

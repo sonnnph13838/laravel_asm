@@ -35,39 +35,7 @@
             }
         </style>
 
-        <?php //Hiển thị thông báo thành công?>
-        @if ( Session::has('success') )
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        <?php //Hiển thị thông báo lỗi?>
-        @if ( Session::has('error') )
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <strong>{{ Session::get('error') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-    @endif
+        
 
     <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -103,6 +71,39 @@
                                         <label for="">Tên Loại Phòng<span class="text-danger">(*)</span></label>
                                         <input type="text" name="name" class="form-control" id="name" value="@isset($request['name']){{ $request['name'] }}@endisset">
                                     </div>
+                                    <?php //Hiển thị thông báo thành công?>
+                                        @if ( Session::has('success') )
+                                            <div class="alert alert-success alert-dismissible" role="alert">
+                                                <strong>{{ Session::get('success') }}</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        <?php //Hiển thị thông báo lỗi?>
+                                        @if ( Session::has('error') )
+                                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                                <strong>{{ Session::get('error') }}</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                    @endif
                                     <br>
                                     <div class="form-group">
                                         <div class="form-check">

@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kind_of_room;
-use App\Models\Room;
-use Illuminate\Http\Request;
+use App\Models\Service;
+use App\Http\Requests\ServiceRequest;
 use Illuminate\Support\Facades\Session;
 
-class RoomController extends Controller
+class ServiceController extends Controller
 {
-    //
     private $v;
     public function __construct()
     {
@@ -17,20 +15,19 @@ class RoomController extends Controller
     }
     public function index()
     {
-        $opj = new Room();
-        $this->v['list_room'] = $opj->loadList();
-        return view("admin/room.index", $this->v);
+        $opj = new Service();
+        $this->v['list_service'] = $opj->loadList();
+        return view("admin/service.index", $this->v);
     }
-    public function add(Request $request)
+    public function add(ServiceRequest $request)
     {
-        $obj = new Kind_of_room();
-        $this->v['list_kind_of_room'] = $obj->loadList();
-        $method_route = 'Room_add';
+
+        $method_route = 'service_add';
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();
             unset($param['cols']['_token']);
-            $modelTest = new Room();
+            $modelTest = new Service();
             $res = $modelTest->saveNew($param);
             if ($res = null) {
                 return redirect()->route($method_route);
@@ -41,6 +38,6 @@ class RoomController extends Controller
                 return redirect()->route($method_route);
             }
         }
-        return view("admin/room.add", $this->v);
+        return view("admin/service.add", $this->v);
     }
 }

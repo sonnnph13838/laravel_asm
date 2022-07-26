@@ -215,13 +215,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('List_kind_of_room')}}" class="nav-link">
+                <a href="{{route('list_kind_of_room')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('Kind_of_room_add')}}" class="nav-link">
+                <a href="{{route('kind_of_room_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>
@@ -238,13 +238,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('List_room')}}" class="nav-link">
+                <a href="{{route('list_room')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('Room_add')}}" class="nav-link">
+                <a href="{{route('room_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>
@@ -261,13 +261,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{{route('list_service')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="{{route('service_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>

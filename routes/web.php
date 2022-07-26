@@ -25,8 +25,15 @@ Route::get('about', 'AboutController@index')->name('About');
 
 
 //admin
-Route::get('/admin', 'AdminController@index')->name('Admin');
-Route::match(['get', 'post'], 'admin/Kind_of_room_add', 'Kind_of_roomController@add')->name('Kind_of_room_add');
-Route::get('/admin/Kind_of_room_list', 'Kind_of_roomController@index')->name('List_kind_of_room');
-Route::match(['get', 'post'], 'admin/Room_add', 'RoomController@add')->name('Room_add');
-Route::get('/admin/Room_list', 'RoomController@index')->name('List_room');
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+//loai phong
+Route::match(['get', 'post'], 'admin/kind_of_room_add', 'Kind_of_roomController@add')->name('kind_of_room_add');
+Route::get('/admin/kind_of_room_list', 'Kind_of_roomController@index')->name('list_kind_of_room');
+//phong
+Route::match(['get', 'post'], 'admin/room_add', 'RoomController@add')->name('room_add');
+Route::get('/admin/room_list', 'RoomController@index')->name('list_room');
+
+//service
+Route::get('/admin/service_list', 'ServiceController@index')->name('list_service');
+Route::match(['get', 'post'], 'admin/service_add', 'ServiceController@add')->name('service_add');

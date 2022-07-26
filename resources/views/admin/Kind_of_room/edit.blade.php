@@ -35,39 +35,7 @@
             }
         </style>
 
-        <?php //Hiển thị thông báo thành công?>
-        @if ( Session::has('success') )
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        <?php //Hiển thị thông báo lỗi?>
-        @if ( Session::has('error') )
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <strong>{{ Session::get('error') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-    @endif
+        
 
     <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -100,34 +68,46 @@
                                 @csrf
                                 <div class="col-6 offset-3">
                                     <div class="form-group">
-                                        <label for="">Tên Phòng<span class="text-danger">(*)</span></label>
-                                        <input type="text" name="name" class="form-control" id="name" value="@isset($request['name']){{ $request['name'] }}@endisset">
+                                        <label for="">Tên Loại Phòng<span class="text-danger">(*)</span></label>
+                                        <input type="text" name="name" class="form-control" id="name" value="">
                                     </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label for="">Loại Phòng<span class="text-danger">(*)</span></label>
-                                        <br>
-                                    <select class="form-select" aria-label="Default select example" name="id_kind_of_room" value="@isset($request['id_kind_of_room']){{ $request['id_kind_of_room'] }}@endisset">
-                                    <option selected>Loại Phòng</option>
-                                    @foreach ($list_kind_of_room as $item)
-                                    <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                    </select>
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label for="">Giá<span class="text-danger">(*)</span></label>
-                                        <input type="text" name="price" class="form-control" id="price" value="@isset($request['price']){{ $request['price'] }}@endisset">
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label for="">Mô Tả<span class="text-danger">(*)</span></label>
-                                        <input type="text" name="discription" class="form-control" id="name" value="@isset($request['discription']){{ $request['discription'] }}@endisset">
-                                    </div>
+                                    <?php //Hiển thị thông báo thành công?>
+                                        @if ( Session::has('success') )
+                                            <div class="alert alert-success alert-dismissible" role="alert">
+                                                <strong>{{ Session::get('success') }}</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        <?php //Hiển thị thông báo lỗi?>
+                                        @if ( Session::has('error') )
+                                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                                <strong>{{ Session::get('error') }}</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Close</span>
+                                                </button>
+                                            </div>
+                                    @endif
                                     <br>
                                     <div class="form-group">
                                         <div class="form-check">
-                                            <input class="form-check-input" id="show_menu" name="status" value="1" type="checkbox">
+                                            <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
                                             <label class="form-check-label" for="show_menu">Hiển thị menu</label>
                                         </div>
                                     </div>

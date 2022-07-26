@@ -93,42 +93,26 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Tạo Mới Loại Phòng</h3>
+                            <h3 class="card-title">Tạo Mới Dịch Vụ</h3>
                         </div>
                         <div class="card-body">
                             <form action="" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-6 offset-3">
                                     <div class="form-group">
-                                        <label for="">Tên Phòng<span class="text-danger">(*)</span></label>
+                                        <label for="">Tên Dịch Vụ<span class="text-danger">(*)</span></label>
                                         <input type="text" name="name" class="form-control" id="name" value="@isset($request['name']){{ $request['name'] }}@endisset">
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <label for="">Loại Phòng<span class="text-danger">(*)</span></label>
-                                        <br>
-                                    <select class="form-select" aria-label="Default select example" name="id_kind_of_room" value="@isset($request['id_kind_of_room']){{ $request['id_kind_of_room'] }}@endisset">
-                                    <option selected>Loại Phòng</option>
-                                    @foreach ($list_kind_of_room as $item)
-                                    <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                    </select>
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label for="">Giá<span class="text-danger">(*)</span></label>
+                                        <label for="">Giá Dịch Vụ<span class="text-danger">(*)</span></label>
                                         <input type="text" name="price" class="form-control" id="price" value="@isset($request['price']){{ $request['price'] }}@endisset">
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <label for="">Mô Tả<span class="text-danger">(*)</span></label>
-                                        <input type="text" name="discription" class="form-control" id="name" value="@isset($request['discription']){{ $request['discription'] }}@endisset">
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
                                         <div class="form-check">
-                                            <input class="form-check-input" id="show_menu" name="status" value="1" type="checkbox">
-                                            <label class="form-check-label" for="show_menu">Hiển thị menu</label>
+                                            <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
+                                            <label class="form-check-label" for="show_menu">Hiển Thị Service</label>
                                         </div>
                                     </div>
                                     <br>
