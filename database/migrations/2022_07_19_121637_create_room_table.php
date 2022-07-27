@@ -17,15 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
-            $table->string('discription');
-            $table->string('room_size');
-            $table->string('occupancy');
-            $table->string('view');
-            $table->string('bed_size');
-            $table->string('smoking');
-            $table->string('location');
+            $table->string('description');
             $table->string('room_service');
-            $table->string('swimming_pool');
             $table->string('features');
             $table->integer('id_kind_of_room');
             $table->integer('status')->default(1);
