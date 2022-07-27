@@ -73,7 +73,7 @@
             </div>
             <!-- /.content -->
         </div>
-        <div class="text-center">
+<div class="col d-flex justify-content-center">
             {{$list_room->links()}}
         </div>
         <!-- /.content-wrapper -->

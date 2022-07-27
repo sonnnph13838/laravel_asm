@@ -32,7 +32,7 @@ Route::match(['get', 'post'], 'admin/kind_of_room_add', 'Kind_of_roomController@
 Route::get('/admin/kind_of_room_list', 'Kind_of_roomController@index')->name('list_kind_of_room');
 //phong
 Route::match(['get', 'post'], 'admin/room_add', 'RoomController@add')->name('room_add');
-Route::get('/admin/room_list', 'RoomController@index')->name('list_room');
+Route::get('/admin/room_list', 'RoomController@index1')->name('list_room');
 
 //service
 Route::get('/admin/service_list', 'ServiceController@index')->name('list_service');
