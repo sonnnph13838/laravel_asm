@@ -216,8 +216,8 @@
     <script>window.location.href = '/';</script>
 @endif
 <div class="login-box">
-    <h2>Login</h2>
-    <form action="{{ url('/login') }}" method="post">
+    <h2>Register</h2>
+    <form action="{{ url('/register') }}" method="post">
         <div class="user-box">
             <input type="text" name="email" required="">
             <label>Email</label>
@@ -231,14 +231,15 @@
             <span></span>
             <span></span>
             <span></span>
-           Login
+            Register
         </button>
 
         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
     </form>
-    <p>Nếu bạn chưa có tải khoản <a href="/register">Đăng ký</a> ngay </p>
+    <p>Bạn đã có tài khoản <a href="/login">Đăng nhập</a> ngay </p>
 </div>
 
+{{--<p class="text-danger login-box-msg">Vui lòng đăng nhập để tiếp tục!--}}
 <?php //Hiển thị thông báo thành công?>
 @if ( Session::has('success') )
     <div class="alert alert-success alert-dismissible" role="alert">
