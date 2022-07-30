@@ -26,7 +26,7 @@ Route::get('about', 'AboutController@index')->name('About');
 
 //admin
 Route::get('/admin', 'AdminController@index')->name('admin');
-
+Route::get('/sondz', 'AdminController@index')->name('sondz');
 //loai phong
 Route::match(['get', 'post'], 'admin/kind_of_room_add', 'Kind_of_roomController@add')->name('kind_of_room_add');
 Route::get('/admin/kind_of_room_list', 'Kind_of_roomController@index')->name('list_kind_of_room');
