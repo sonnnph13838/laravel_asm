@@ -95,9 +95,9 @@
                         <div class="lang-wrap" style="text-align: center; width:100px">
 							Tài Khoản
 							<ul>
-								<li><a href="#">Đăng Nhập</a></li>
-								<li><a href="#">Đăng Kí</a></li>
-								<li><a href="#"></a></li>
+								<li><a href="/login">Đăng Nhập</a></li>
+								<li><a href="/register">Đăng Kí</a></li>
+								<li><a href="edit_account">Sửa tài khoản</a></li>
 							</ul>
 						</div>
                     </div>
