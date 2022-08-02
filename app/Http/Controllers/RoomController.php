@@ -31,11 +31,15 @@ class RoomController extends Controller
     {
         $obj = new Kind_of_room();
         $this->v['list_kind_of_room'] = $obj->loadList();
-        $method_route = 'Room_add';
+        $method_route = 'room_add';
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();
+            dd($param);
             unset($param['cols']['_token']);
+            if($request->hasFile('cmt_mat_truoc') && $request->file('cmt_mat_truoc')->isValid()){
+                $params['cols']['hinh'] = $this->uploadFile($request->file('cmt_mat_truoc'));
+            }
             $modelTest = new Room();
             $res = $modelTest->saveNew($param);
             if ($res = null) {
@@ -48,5 +52,9 @@ class RoomController extends Controller
             }
         }
         return view("admin/room.add", $this->v);
+    }
+    public function uploadFile($file){
+        $fileName = time().'_'.$file->getClientOriginalName();
+        return $file->storeAs('cmnd',$fileName,'public');
     }
 }

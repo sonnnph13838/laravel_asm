@@ -31,6 +31,7 @@
                                     <th>STT</th>
                                     <th>Tên Phòng</th>
                                     <th>Giá</th>
+                                    <th>Hình Ảnh</th>
                                     <th>Mô Tả</th>
                                     <th>Đặc Trưng</th>
                                     <th>Trạng Thái</th>
@@ -46,6 +47,7 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->price}}</td>
+                                <td>{{$item->hinh}}</td>
                                 <td>{{$item->description}}</td>
                                 <td>{{$item->features}}</td>
                                 <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
