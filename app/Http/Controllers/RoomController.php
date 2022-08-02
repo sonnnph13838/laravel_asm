@@ -35,10 +35,9 @@ class RoomController extends Controller
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();
-            dd($param);
             unset($param['cols']['_token']);
             if($request->hasFile('cmt_mat_truoc') && $request->file('cmt_mat_truoc')->isValid()){
-                $params['cols']['hinh'] = $this->uploadFile($request->file('cmt_mat_truoc'));
+                $params['cols']['image'] = $this->uploadFile($request->file('cmt_mat_truoc'));
             }
             $modelTest = new Room();
             $res = $modelTest->saveNew($param);
