@@ -30,6 +30,10 @@ Route::post('/login', 'Auth\LoginController@postLogin');
 Route::get('/register', 'Auth\RegisterController@getRegister');
 Route::post('/register', 'Auth\RegisterController@postRegister');
 
+//client
+Route::get('/account','UserController@account');
+
+
 //admin
 Route::get('/admin', 'AdminController@index')->name('admin');
 

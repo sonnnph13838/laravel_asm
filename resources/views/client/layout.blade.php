@@ -94,11 +94,16 @@
                         <a href="#" class="social-top">tw</a>
                         <div class="lang-wrap" style="text-align: center; width:100px">
 							Tài Khoản
+                            <?php if(!(isset($_SESSION))) : ?>
 							<ul>
-								<li><a href="#">Đăng Nhập</a></li>
-								<li><a href="#">Đăng Kí</a></li>
-								<li><a href="#"></a></li>
+                                <li><a href="/account">Sửa tài khoản</a></li>   
 							</ul>
+                            <?php else : ?>
+                                <ul>
+                                    <li><a href="/login">Đăng Nhập</a></li>
+                                    <li><a href="/register">Đăng Kí</a></li>
+                                </ul>
+                            <?php endif; ?>
 						</div>
                     </div>
                 </div>

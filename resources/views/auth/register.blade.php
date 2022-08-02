@@ -219,6 +219,10 @@
     <h2>Register</h2>
     <form action="{{ url('/register') }}" method="post">
         <div class="user-box">
+            <input type="text" name="name" required="">
+            <label>Name</label>
+        </div>
+        <div class="user-box">
             <input type="text" name="email" required="">
             <label>Email</label>
         </div>
