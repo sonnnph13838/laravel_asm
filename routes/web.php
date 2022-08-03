@@ -37,3 +37,12 @@ Route::get('/admin/room_list', 'RoomController@index1')->name('list_room');
 //service
 Route::get('/admin/service_list', 'ServiceController@index')->name('list_service');
 Route::match(['get', 'post'], 'admin/service_add', 'ServiceController@add')->name('service_add');
+//banner
+Route::get('/admin/banner_list', 'BannerController@index')->name('list_banners');
+Route::match(['get', 'post'], 'admin/banner_add', 'BannerController@add')->name('banner_add');
+Route::get('/admin/banner_edit/{id}', 'BannerController@detail')->name('route_BackEnd_Banner_Detail');
+Route::post('/admin/banner_edit/{id}', 'BannerController@update')->name('route_BackEnd_Banner_Update');
+Route::get('/admin/banner_delete/{id}', 'BannerController@delete')->name('route_BackEnd_Banner_Delete');
+Route::get('/admin/banner_bin', 'BannerController@bin')->name('banner_bin');
+
+

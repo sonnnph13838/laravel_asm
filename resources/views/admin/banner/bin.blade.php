@@ -23,43 +23,36 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Danh Sách Loại phòng</h3>
+                            <h3 class="card-title">Danh Sách Banner</h3>
                         </div>
                         <div class="card-body">
                             <table class="table tabl-stripped">
                                 <thead>
                                     <th>STT</th>
-                                    <th>Tên Phòng</th>
-                                    <th>Giá</th>
+                                    <th>Tên Banner</th>
                                     <th>Hình Ảnh</th>
-                                    <th>Mô Tả</th>
-                                    <th>Đặc Trưng</th>
                                     <th>Trạng Thái</th>
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
-                                        <a href="{{route('room_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
+                                        <a href="{{route('banner_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
                                     </th>
                                 </thead>
                                 <tbody>
-                                   @foreach ($list_room as $index =>$item)
+                                   @foreach ($list_banner as $index =>$item)
                                         <tr>
-                                <td>{{$index + 1}}</td>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->price}}</td>
-                                <td><img id="mat_truoc_preview"src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
-                                <td>{{$item->description}}</td>
-                                <td>{{$item->features}}</td>
-                                <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
-                                <td>{{$item->created_at}}</td>
-                                <td>{{$item->updated_at}}</td>
                                 
+                                <td>{{$item->name}}</td>           
+                                <td><img id="image"src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
+                                <td>{{$item->status == 0 ? "Hiển Thị" : "Ẩn" }}</td>
+                                <td>{{$item->created_at}}</td>
+                                <td>{{$item->updated_at}}</td>      
                                 <td>
-                                    <a href="" class="btn btn-sm btn-info">
+                                    <a href="{{route('route_BackEnd_Banner_Detail',$item->id)}}" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
 
-                                    <a href=""  class="btn btn-sm btn-danger">
+                                    <a href="{{route('route_BackEnd_Banner_Delete',$item->id)}}"  class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
@@ -76,7 +69,7 @@
             <!-- /.content -->
         </div>
 <div class="col d-flex justify-content-center">
-            {{$list_room->links()}}
+            {{$list_banner->links()}}
         </div>
         <!-- /.content-wrapper -->
     </div>

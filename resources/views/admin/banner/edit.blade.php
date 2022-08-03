@@ -97,42 +97,22 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Tạo Mới Loại Phòng</h3>
+                                <h3 class="card-title">Tạo Mới Banner</h3>
                             </div>
                             <div class="card-body">
                                 <form action="" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="col-6 offset-3">
                                         <div class="form-group">
-                                            <label for="">Tên Phòng<span class="text-danger">(*)</span></label>
-                                            <input type="text" name="name" class="form-control" id="name" value="@isset($request['name']){{ $request['name'] }}@endisset">
+                                            <label for="">Tên Banner<span class="text-danger">(*)</span></label>
+                                            <input type="text" name="name" class="form-control" id="name" value="{{$objBanner->name}}">
                                         </div>
                                         <br>
+                                        <img id="image"src="{{ $objBanner->image?''.Storage::url($objBanner->image):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
                                         <br>
                                         <div class="form-group">
                                             <label for="image">Hình Ảnh</label>
                                             <input type="file" name="image" id="image" class="form-control-file">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Loại Phòng<span class="text-danger">(*)</span></label>
-                                            <br>
-                                            <select class="form-select" aria-label="Default select example" name="id_kind_of_room" value="@isset($request['id_kind_of_room']){{ $request['id_kind_of_room'] }}@endisset">
-                                                <option selected>Loại Phòng</option>
-                                                @foreach ($list_kind_of_room as $item)
-                                                <option value="{{$item->id}}">{{$item->name}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        
-                                        <br>
-                                        <div class="form-group">
-                                            <label for="">Giá<span class="text-danger">(*)</span></label>
-                                            <input type="text" name="price" class="form-control" id="price" value="@isset($request['price']){{ $request['price'] }}@endisset">
-                                        </div>
-                                        <br>
-                                        <div class="form-group">
-                                            <label for="">Mô Tả<span class="text-danger">(*)</span></label>
-                                            <input type="text" name="description" class="form-control" id="name" value="@isset($request['description']){{ $request['description'] }}@endisset">
                                         </div>
                                         <br>
                                         <div class="form-group">
@@ -172,7 +152,7 @@
 
                             <div class="col-md-9 col-sm-8">
                                 <input type="text" name="name" id="name" class="form-control" value="@isset($request['name']){{ $request['name'] }}@endisset">
-    <span id="mes_sdt"></span>
+    <span id="mes_sdt"></span> 
     </div>
     </div>
     <div class="form-group">

@@ -29,6 +29,7 @@ class RoomController extends Controller
     }
     public function add(Request $request)
     {
+        
         $obj = new Kind_of_room();
         $this->v['list_kind_of_room'] = $obj->loadList();
         $method_route = 'room_add';
@@ -36,8 +37,9 @@ class RoomController extends Controller
             $param = [];
             $param['cols'] = $request->post();
             unset($param['cols']['_token']);
-            if($request->hasFile('cmt_mat_truoc') && $request->file('cmt_mat_truoc')->isValid()){
-                $params['cols']['image'] = $this->uploadFile($request->file('cmt_mat_truoc'));
+            //dd($request->file('image')->isValid());
+            if($request->hasFile('image') && $request->file('image')->isValid()){
+                $param['cols']['image'] = $this->uploadFile($request->file('image'));
             }
             $modelTest = new Room();
             $res = $modelTest->saveNew($param);
@@ -54,6 +56,6 @@ class RoomController extends Controller
     }
     public function uploadFile($file){
         $fileName = time().'_'.$file->getClientOriginalName();
-        return $file->storeAs('cmnd',$fileName,'public');
+        return $file->storeAs('image',$fileName,'public');
     }
 }
