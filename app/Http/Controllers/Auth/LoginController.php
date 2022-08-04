@@ -4,28 +4,32 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+
 
 class LoginController extends Controller
 {
-    //
     public function getLogin()
     {
         return view('auth.login');
     }
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect('login');
+    }
     public function postLogin(Request $request)
     {
-        $rules =  [
+        $rules = [
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required'
         ];
         $messages = [
-            'email.required' => 'Mời bạn nhập vào email',
-            'email.email' => 'Mời bạn nhập đúng định dạng email',
-            'password.required' => 'Mời bạn nhập mật khẩu'
+            'email.required' => 'Mời bạn nhập vào emal',
+            'email.email' => 'Mời bạn nhập đúng định dạnh email',
+            'password.required' => 'Mời bạn nhập password'
         ];
         $validator = Validator::make($request->all(), $rules, $messages);
         if ($validator->fails()) {
@@ -34,16 +38,11 @@ class LoginController extends Controller
             $email = $request->input('email');
             $password = $request->input('password');
             if (Auth::attempt(['email' => $email, 'password' => $password])) {
-                return redirect('/');
+                return redirect('home');
             } else {
-                Session::flash('error', 'Email hoặc mật khẩu không đúng');
+                Session::flash('error', 'email hoac pass khong dung');
                 return redirect('login');
             }
         }
-    }
-    public function getLogout()
-    {
-        Auth::logout();
-        return redirect('login');
     }
 }
