@@ -38,9 +38,9 @@
 
     <!-- Web Fonts 
 	================================================== -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- CSS
@@ -93,18 +93,13 @@
                         <a href="#" class="social-top">fb</a>
                         <a href="#" class="social-top">tw</a>
                         <div class="lang-wrap" style="text-align: center; width:100px">
-							Tài Khoản
-                            <?php if(!(isset($_SESSION))) : ?>
-							<ul>
-                                <li><a href="/account">Sửa tài khoản</a></li>   
-							</ul>
-                            <?php else : ?>
-                                <ul>
-                                    <li><a href="/login">Đăng Nhập</a></li>
-                                    <li><a href="/register">Đăng Kí</a></li>
-                                </ul>
-                            <?php endif; ?>
-						</div>
+                            Tài Khoản
+                            <ul>
+                                <li><a href="/account">Sửa tài khoản</a></li>
+                                <li><a href="/login">Đăng Nhập</a></li>
+                                <li><a href="/register">Đăng Kí</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,11 +156,11 @@
     </nav>
 
 
-@yield('content')
+    @yield('content')
 
 
 
-{{-- footer --}}
+    {{-- footer --}}
     <div class="section padding-top-bottom-small background-black over-hide footer">
         <div class="container">
             <div class="row">
