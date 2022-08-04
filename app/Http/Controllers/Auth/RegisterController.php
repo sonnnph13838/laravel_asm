@@ -44,7 +44,7 @@ class RegisterController extends Controller
                 return redirect()->route('register');
             } elseif ($res > 0) {
                 Session::flash('success', 'Them moi thanh cong nguoi dung');
-                return redirect('tuyen');
+                return redirect('login');
             } else {
                 Session::flash('error', 'Loi them moi nguoi dung');
                 return redirect()->route('register');

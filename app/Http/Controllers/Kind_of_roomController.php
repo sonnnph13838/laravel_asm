@@ -34,13 +34,12 @@ class Kind_of_roomController extends Controller
             unset($param['cols']['_token']);
             $modelTest = new Kind_of_room();
             $res = $modelTest->saveNew($param);
-            if ($res = null) {
+            if ($res == null) {
                 return redirect()->route($method_route);
-            }
-            if ($res > 1) {
-                Session::flash('success', 'Them moi thanh cong');
+            } elseif ($res > 0) {
+                Session::flash('success', 'Thêm thành công');
             } else {
-                Session::flash('error', 'Loi them moi nguoi dung');
+                Session::flash('error', 'Lỗi thêm mới người dùng');
                 return redirect()->route($method_route);
             }
         }

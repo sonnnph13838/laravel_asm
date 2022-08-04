@@ -33,12 +33,12 @@ class LoginController extends Controller
         ];
         $validator = Validator::make($request->all(), $rules, $messages);
         if ($validator->fails()) {
-            return redirect('login')->withErrors($validator);
+            return redirect('/')->withErrors($validator);
         } else {
             $email = $request->input('email');
             $password = $request->input('password');
             if (Auth::attempt(['email' => $email, 'password' => $password])) {
-                return redirect('home');
+                return redirect('/');
             } else {
                 Session::flash('error', 'email hoac pass khong dung');
                 return redirect('login');

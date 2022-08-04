@@ -48,12 +48,12 @@ class RoomController extends Controller
             unset($param['cols']['_token']);
             $modelTest = new Room();
             $res = $modelTest->saveNew($param);
-            if ($res = null) {
+            if ($res == null) {
                 return redirect()->route($method_route);
             } elseif ($res > 0) {
-                Session::flash('success', 'Them moi thanh cong');
+                Session::flash('success', 'Thêm thành công');
             } else {
-                Session::flash('error', 'Loi them moi nguoi dung');
+                Session::flash('error', 'Lỗi thêm mới người dùng');
                 return redirect()->route($method_route);
             }
         }

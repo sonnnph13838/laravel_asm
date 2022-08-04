@@ -46,4 +46,10 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], 'admin/service_add', 'ServiceController@add')->name('service_add');
     Route::get('/admin/service_detail/{id}', 'ServiceController@detail')->name('service_detail');
     Route::post('/admin/service_update/{id}', 'ServiceController@update')->name('service_update');
+
+    //banner
+    Route::get('/admin/banner_list', 'BannerController@index1')->name('list_banner');
+    Route::match(['get', 'post'], 'admin/banner_add', 'BannerController@add')->name('banner_add');
+    Route::get('/admin/banner_detail/{id}', 'BannerController@detail')->name('banner_detail');
+    Route::post('/admin/banner_update/{id}', 'BannerController@update')->name('banner_update');
 });
