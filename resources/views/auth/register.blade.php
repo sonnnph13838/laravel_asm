@@ -226,6 +226,7 @@
             <input type="password" name="password" required="">
             <label>Password</label>
         </div>
+        
         <button type="submit">
             <span></span>
             <span></span>
