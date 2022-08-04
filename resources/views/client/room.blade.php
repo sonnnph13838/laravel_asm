@@ -40,7 +40,7 @@
 									<img src="{{asset('img/home3.jpg')}}" alt="">
 									<div class="room-box-in">
 										<h5 class="">{{$item->name}}</h5>
-										<p class="mt-3">{{$item->description}}</p>
+										<p class="mt-3" >{{$item->discription}}</p>
 										<a class="mt-1 btn btn-primary" href="{{route('room_details', ['id' => $item->id])}}"> Đặt Ngay {{$item->price}}</a>
 										<div class="room-icons mt-4 pt-4">
 											<img src="img/5.svg" alt="">

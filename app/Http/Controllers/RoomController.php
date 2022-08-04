@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kind_of_room;
+use App\Models\List_booking;
 use App\Models\Room;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -87,5 +88,29 @@ class RoomController extends Controller
             Session::flash('error', 'lỗi cập nhật abnr ghi' . $objItem->id);
             return redirect()->route($method_route, ['id' => $id]);
         }
+    }
+    public function booking($id, Request $request)
+    {
+        $obj = new Room();
+        $this->v['room'] = $obj->loadOne($id);
+        $obj = new Service();
+        $this->v['list_service'] = $obj->loadList();
+        $method_route = 'booking';
+        if ($request->isMethod('post')) {
+            $param = [];
+            $param['cols'] = $request->post();
+            unset($param['cols']['_token']);
+            $modelTest = new List_booking();
+            $res = $modelTest->saveNew($param);
+            if ($res = null) {
+                return redirect()->route($method_route);
+            } elseif ($res > 0) {
+                Session::flash('success', 'Them moi thanh cong');
+            } else {
+                Session::flash('error', 'Loi them moi nguoi dung');
+                return redirect()->route($method_route);
+            }
+        }
+        return view("client.room_detail", $this->v,);
     }
 }

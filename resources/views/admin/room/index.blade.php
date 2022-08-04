@@ -32,8 +32,8 @@
                                     <th>Tên Phòng</th>
                                     <th>Giá</th>
                                     <th>Mô Tả</th>
-                                    <th>Đặc Trưng</th>
-                                    <th>Trạng Thái</th>
+                                    {{-- <th>Đặc Trưng</th>
+                                    <th>Trạng Thái</th> --}}
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
@@ -46,8 +46,8 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->price}}</td>
-                                <td>{{$item->discription}}</td>
-                                <td>{{$item->features}}</td>
+                                {{-- <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->discription}}</td>
+                                <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->features}}</td> --}}
                                 <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
                                 <td>{{$item->created_at}}</td>
                                 <td>{{$item->updated_at}}</td>

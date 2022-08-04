@@ -131,7 +131,7 @@
 						</div>
 						<div class="section pt-5">
 							<h5>discription</h5>
-							<p class="mt-3">{{$room->description}}</p>
+							<p class="mt-3">{{$room->discription}}</p>
 						</div>
 						<div class="section pt-4">
 							<div class="row">
@@ -160,74 +160,76 @@
 					
                         <div class="col-lg-4 order-first order-lg-last">
                             <form action="" method="post">
-						<div class="section background-dark p-4">	
-                                <div class="row">
-								<div class="col-12">
-									<div class="input-daterange input-group" id="flight-datepicker">
-										<div class="row">	
-											<div class="col-12">
-												<div class="form-item">
-													<span class="fontawesome-calendar"></span>
-													<input class="input-sm" type="text" autocomplete="off" id="start-date-1" name="start" placeholder="chech-in date" data-date-format="DD, MM d" value="@isset($request['checkin_date']){{ $request['checkin_date'] }}@endisset"/>
-													<span class="date-text date-depart"></span>
+								@csrf
+							<div class="section background-dark p-4">	
+									<div class="row">
+									<div class="col-12">
+										<div class="input-daterange input-group" id="flight-datepicker">
+											<div class="row">	
+												<div class="col-12">
+													<div class="form-item">
+														<span class="fontawesome-calendar"></span>
+														<input class="input-sm" type="text" autocomplete="off" id="start-date-1" name="checkin_date" placeholder="chech-in date" data-date-format="DD, MM d" value="@isset($request['checkin_date']){{ $request['checkin_date'] }}@endisset"/>
+														<span class="date-text date-depart"></span>
+													</div>
 												</div>
+												<div class="col-12 pt-4">
+													<div class="form-item">
+														<span class="fontawesome-calendar"></span>
+														<input class="input-sm" type="text" autocomplete="off" id="end-date-1" name="checkout_date" placeholder="check-out date" data-date-format="DD, MM d" value="@isset($request['checkout_date']){{ $request['checkout_date'] }}@endisset"/>
+														<span class="date-text date-return"></span>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<div class="col-12">
+										<div class="row">
+											<div class="col-12 pt-4">
+												<select name="adults" class="wide" value="@isset($request['adults']){{ $request['adults'] }}@endisset">
+													<option data-display="adults">adults</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
 											</div>
 											<div class="col-12 pt-4">
-												<div class="form-item">
-													<span class="fontawesome-calendar"></span>
-													<input class="input-sm" type="text" autocomplete="off" id="end-date-1" name="end" placeholder="check-out date" data-date-format="DD, MM d" value="@isset($request['checkout_date']){{ $request['checkout_date'] }}@endisset"/>
-													<span class="date-text date-return"></span>
-												</div>
+												<select name="children" class="wide" value="@isset($request['children']){{ $request['children'] }}@endisset">
+													<option data-display="children">children</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
 											</div>
 										</div>
-									</div>	
-								</div>
-								<div class="col-12">
-									<div class="row">
-										<div class="col-12 pt-4">
-											<select name="adults" class="wide" value="@isset($request['adults']){{ $request['adults'] }}@endisset">
-												<option data-display="adults">adults</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-											</select>
+									</div>
+									<div class="col-12 col-md-6 col-lg-12 pt-5">
+										<h6 class="color-white mb-3">Services:</h6>
+										{{-- <div class="form-group" name="id_service" value="@isset($request['id_service']){{ $request['id_service'] }}@endisset">
+											@foreach ($list_service as $item)
+											<div class="form-check">
+												<input class="form-check-input" id="show_menu"  value="{{$item->id}}" type="checkbox">
+												<label class="form-check-label" for="show_menu">{{$item->name}}</label>
+											</div>
+											@endforeach --}}
 										</div>
-										<div class="col-12 pt-4">
-											<select name="children" class="wide" value="@isset($request['children']){{ $request['children'] }}@endisset">
-												<option data-display="children">children</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-											</select>
-										</div>
+											<div>
+											<input type="hidden" name="id_user" value="1">
+											<input type="hidden" name="id_room" value="1">
+											<input type="hidden" name="id_service" value="1">
+											</div>								
+									</div>
+									<div class="col-12 pt-4">
+										<input type="submit" class="booking-button">Bool now
+										{{-- <a class="booking-button" href="searc">book now</a> --}}
 									</div>
 								</div>
-                                <div class="col-12 col-md-6 col-lg-12 pt-5">
-									<h6 class="color-white mb-3">Services:</h6>
-                                    <div class="form-group" name="id_service" value="@isset($request['id_service']){{ $request['id_service'] }}@endisset">
-                                        @foreach ($list_service as $item)
-                                        <div class="form-check">
-                                            <input class="form-check-input" id="show_menu" name="status" value="{{$item->id}}" type="checkbox">
-                                            <label class="form-check-label" for="show_menu">{{$item->name}}</label>
-                                        </div>
-                                        @endforeach
-                                    </div>
-										<div>
-                                        <input type="hiden" name="id_user" value="1">
-                                        <input type="hiden" name="id_room" value="1">
-                                        </div>								
-								</div>
-								<div class="col-12 pt-4">
-                                    <input type="submit" class="booking-button">Bool now
-									{{-- <a class="booking-button" href="searc">book now</a> --}}
-								</div>
-							</div>
 
-						</div>
+							</div>
                         </form>
 					</div>
                     

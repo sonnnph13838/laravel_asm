@@ -18,9 +18,10 @@ Route::get('/room', 'RoomController@index')->name('Kind_of_room');
 Route::get('blog', 'BlogController@index')->name('Blog');
 
 Route::get('about', 'AboutController@index')->name('About');
-Route::get('/room_detail/{id}', 'RoomController@roomDetail')->name('room_details');
-Route::post('/booking', 'List_bookingController@add')->name('booking');
 Route::match(['get', 'post'], 'contact', 'ContactController@add')->name('contact');
+
+Route::match(['get', 'post'], '/room_detail/{id}', 'RoomController@booking')->name('room_details');
+
 //admin
 Route::get('/admin', 'AdminController@index')->name('admin');
 
