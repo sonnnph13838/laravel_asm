@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use Illuminate\Http\Request;
 use App\Http\Requests\ServiceRequest;
 use Illuminate\Support\Facades\Session;
 
@@ -39,5 +40,33 @@ class ServiceController extends Controller
             }
         }
         return view("admin/service.add", $this->v);
+    }
+    public function detail($id)
+    {
+        $objService = new Service();
+        $objItem = $objService->loadOne($id);
+        $this->v['objItem'] = $objItem;
+        return view("admin/Service.edit", $this->v);
+    }
+    public function update($id, Request $request)
+    {
+
+        $method_route = 'service_detail';
+        $params = [];
+        $params['cols'] = $request->post();
+        unset($params['cols']['_token']);
+        $objService = new Service();
+        $objItem = $objService->loadOne($id);
+        $params['cols']['id'] = $id;
+        $res = $objService->SaveUpdate($params);
+        if ($res == null) {
+            return redirect()->route($method_route, ['id' => $id]);
+        } else if ($res == 1) {
+            Session::flash('success', 'Cập nhật bản ghi ' . $objItem->id . ' thành công');
+            return redirect()->route($method_route, ['id' => $id]);
+        } else {
+            Session::flash('error', 'lỗi cập nhật bản ghi' . $objItem->id);
+            return redirect()->route($method_route, ['id' => $id]);
+        }
     }
 }

@@ -26,9 +26,10 @@
 				<div class="row">
 					<div class="col-lg-8 mt-4 mt-lg-0">
 						<div class="row">
-							<div class="col-lg-6">
+							@foreach ($list_room as $item)
+								<div class="col-lg-6">
 								<div class="room-box background-grey">
-									<div class="room-name">suite tanya</div>
+									<div class="room-name">{{$item->name}}</div>
 									<div class="room-per">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -36,140 +37,21 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 									</div>
-									<img src="img/room3.jpg" alt="">
+									<img src="{{asset('img/home3.jpg')}}" alt="">
 									<div class="room-box-in">
-										<h5 class="">pool suite</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 130$</a>
+										<h5 class="">{{$item->name}}</h5>
+										<p class="mt-3" >{{$item->discription}}</p>
+										<a class="mt-1 btn btn-primary" href="{{route('room_details', ['id' => $item->id])}}"> Đặt Ngay {{$item->price}}</a>
 										<div class="room-icons mt-4 pt-4">
 											<img src="img/5.svg" alt="">
 											<img src="img/2.svg" alt="">
 											<img src="img/3.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
+											<a href="rooms-gallery.html">Chi Tiết</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6 mt-4 mt-lg-0">
-								<div class="room-box background-grey">
-									<div class="room-name">suite helen</div>
-									<div class="room-per">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<img src="img/room4.jpg" alt="">
-									<div class="room-box-in">
-										<h5 class="">small room</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 80$</a>
-										<div class="room-icons mt-4 pt-4">
-											<img src="img/4.svg" alt="">
-											<img src="img/2.svg" alt="">
-											<img src="img/6.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-4" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.2s">
-								<div class="room-box background-grey">
-									<div class="room-name">suite andrea</div>
-									<div class="room-per">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<img src="img/room5.jpg" alt="">
-									<div class="room-box-in">
-										<h5 class="">Apartment</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 110$</a>
-										<div class="room-icons mt-4 pt-4">
-											<img src="img/5.svg" alt="">
-											<img src="img/2.svg" alt="">
-											<img src="img/3.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-4" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.4s">
-								<div class="room-box background-grey">
-									<div class="room-name">suite diana</div>
-									<div class="room-per">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<img src="img/room6.jpg" alt="">
-									<div class="room-box-in">
-										<h5 class="">big Apartment</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 160$</a>
-										<div class="room-icons mt-4 pt-4">
-											<img src="img/5.svg" alt="">
-											<img src="img/2.svg" alt="">
-											<img src="img/3.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-4" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.2s">
-								<div class="room-box background-grey">
-									<div class="room-name">suite andrea</div>
-									<div class="room-per">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<img src="img/room5.jpg" alt="">
-									<div class="room-box-in">
-										<h5 class="">Apartment</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 110$</a>
-										<div class="room-icons mt-4 pt-4">
-											<img src="img/5.svg" alt="">
-											<img src="img/2.svg" alt="">
-											<img src="img/3.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-4" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.4s">
-								<div class="room-box background-grey">
-									<div class="room-name">suite diana</div>
-									<div class="room-per">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-									<img src="img/room6.jpg" alt="">
-									<div class="room-box-in">
-										<h5 class="">big Apartment</h5>
-										<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-										<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 160$</a>
-										<div class="room-icons mt-4 pt-4">
-											<img src="img/5.svg" alt="">
-											<img src="img/2.svg" alt="">
-											<img src="img/3.svg" alt="">
-											<a href="rooms-gallery.html">full info</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							@endforeach
 						</div>
 					</div>
 					<div class="col-lg-4 order-first order-lg-last">
@@ -233,36 +115,14 @@
 								<div class="col-12 col-md-6 col-lg-12 pt-5">
 									<h6 class="color-white mb-3">Services:</h6>
 									<ul class="list">
+										{{-- @foreach ($list_kind_of_room -> $item)
 										<li class="list__item">
 											<label class="label--checkbox">
-												<input type="checkbox" class="checkbox">
-												welcome drink
+												{{$item->name}}
 											</label>
 										</li>
-										<li class="list__item">
-											<label class="label--checkbox">
-												<input type="checkbox" class="checkbox">
-												television
-											</label>
-										</li>
-										<li class="list__item">
-											<label class="label--checkbox">
-												<input type="checkbox" class="checkbox">
-												king beds
-											</label>
-										</li>
-										<li class="list__item">
-											<label class="label--checkbox">
-												<input type="checkbox" class="checkbox">
-												bike rental
-											</label>
-										</li>
-										<li class="list__item">
-											<label class="label--checkbox">
-												<input type="checkbox" class="checkbox">
-												no smoking
-											</label>
-										</li>
+										@endforeach --}}
+	
 									</ul>									
 								</div>
 								<div class="col-12 col-md-6 col-lg-12 pt-5">

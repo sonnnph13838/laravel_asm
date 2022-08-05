@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Danh Sách Loại Phòng</h1>
+                    <h1 class="m-0">Danh Sách Phòng</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="">/ Loại Phòng</li>
+                        <li class=""></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -23,7 +23,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Danh Sách Loại phòng</h3>
+                            <h3 class="card-title">Danh Sách phòng</h3>
                         </div>
                         <div class="card-body">
                             <table class="table tabl-stripped">
@@ -33,8 +33,8 @@
                                     <th>Giá</th>
                                     <th>Hình Ảnh</th>
                                     <th>Mô Tả</th>
-                                    <th>Đặc Trưng</th>
-                                    <th>Trạng Thái</th>
+                                    {{-- <th>Đặc Trưng</th>
+                                    <th>Trạng Thái</th> --}}
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
@@ -47,15 +47,17 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->price}}</td>
+
                                 <td><img id="mat_truoc_preview"src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
                                 <td>{{$item->description}}</td>
                                 <td>{{$item->features}}</td>
+
                                 <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
                                 <td>{{$item->created_at}}</td>
                                 <td>{{$item->updated_at}}</td>
                                 
                                 <td>
-                                    <a href="" class="btn btn-sm btn-info">
+                                    <a href="{{route('room_detail', ['id' => $item->id])}}" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
 

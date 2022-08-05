@@ -39,31 +39,23 @@
 					<h3 class="text-center padding-bottom-small">drop us a line</h3>
 				</div>
 				<div class="section clearfix"></div>
-				<div class="col-md-4 ajax-form">
-					<input name="name" type="text" placeholder="Your Name: *" autocomplete="off"/>
-				</div>
-				<div class="col-md-4 mt-4 mt-md-0 ajax-form">
-					<input name="email" type="text"  placeholder="E-Mail: *" autocomplete="off"/>
-				</div>
+				<form action="" method="post" >
+					@csrf
+					<input name="name" type="text" placeholder="Your Name: *" autocomplete="off" value="@isset($request['name']){{ $request['name'] }}@endisset"/ >
+
+
+					<input name="email" type="text"  placeholder="E-Mail: *" autocomplete="off" value="@isset($request['email']){{ $request['email'] }}@endisset"/>
+
+
+					<textarea name="messages" placeholder="Tell Us Everything" value="@isset($request['messages']){{ $request['messages'] }}@endisset"></textarea>
+
 				<div class="section clearfix"></div>
-				<div class="col-md-8 mt-4 ajax-form">
-					<textarea name="message" placeholder="Tell Us Everything"></textarea>
-				</div>
-				<div class="section clearfix"></div>
-				<div class="col-md-8 mt-3 ajax-checkbox">
-					<ul class="list">
-						<li class="list__item">
-							<label class="label--checkbox">
-								<input type="checkbox" class="checkbox">
-								collect my details through this form
-							</label>
-						</li>
-					</ul>
-				</div>
 				<div class="section clearfix"></div>
 				<div class="col-md-8 mt-3 ajax-form text-center">
-					<button class="send_message" id="send" data-lang="en"><span>submit</span></button>
+					<input type="submit" class="send_message" id="send" value="Gửi">
+					
 				</div>
+				</form>
 				<div class="section clearfix"></div>
 				<div class="col-md-8 padding-top-bottom">
 					<div class="sep-line"></div>

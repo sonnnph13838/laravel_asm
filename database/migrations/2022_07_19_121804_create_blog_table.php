@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('image1');
             $table->string('image2');
             $table->string('image3');
-            $table->string('description');
+            $table->string('discription');
             $table->string('content');
             $table->string('content1');
             $table->integer('status')->default(1);

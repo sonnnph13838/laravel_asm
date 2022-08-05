@@ -43,7 +43,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tạo Loại Phòng</h1>
+                    <h1 class="m-0">Tạo Mới Dịch Vụ</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
@@ -66,39 +66,7 @@
                         <div class="card-body">
                             <form action="" method="post" enctype="multipart/form-data">
                                 @csrf
-                                <?php //Hiển thị thông báo thành công?>
-        @if ( Session::has('success') )
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        <?php //Hiển thị thông báo lỗi?>
-        @if ( Session::has('error') )
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <strong>{{ Session::get('error') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-    @endif
+                                
                                 <div class="col-6 offset-3">
                                     <div class="form-group">
                                         <label for="">Tên Dịch Vụ<span class="text-danger">(*)</span></label>
@@ -109,6 +77,40 @@
                                         <label for="">Giá Dịch Vụ<span class="text-danger">(*)</span></label>
                                         <input type="text" name="price" class="form-control" id="price" value="@isset($request['price']){{ $request['price'] }}@endisset">
                                     </div>
+                                    <br>
+                                    <?php //Hiển thị thông báo thành công?>
+                                    @if ( Session::has('success') )
+                                        <div class="alert alert-success alert-dismissible" role="alert">
+                                            <strong>{{ Session::get('success') }}</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                        </div>
+                                    @endif
+                                    <?php //Hiển thị thông báo lỗi?>
+                                    @if ( Session::has('error') )
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <strong>{{ Session::get('error') }}</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                        </div>
+                                    @endif
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                        </div>
+                                @endif
                                     <br>
                                     <div class="form-group">
                                         <div class="form-check">

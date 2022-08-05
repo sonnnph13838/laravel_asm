@@ -67,9 +67,9 @@
 
 <body>
 
-    <div class="loader">
+    {{-- <div class="loader">
         <div class="loader__figure"></div>
-    </div>
+    </div> --}}
 
     <svg class="hidden">
         <svg id="icon-nav" viewBox="0 0 152 63">
@@ -146,7 +146,7 @@
                     <a href="{{route('Blog')}}">Bài Viết</a>
                 </li>
                 <li>
-                    <a href="{{route('Contact')}}">Liên Hệ</a>
+                    <a href="{{route('contact')}}">Liên Hệ</a>
                 </li>
                 <li>
                     <a href="search.html"><span>book now</span></a>

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('checkout_date');
             $table->integer('adults');
             $table->integer('children');
-            $table->integer('id_service');
+            $table->json('id_service');
             $table->timestamps();
         });
     }

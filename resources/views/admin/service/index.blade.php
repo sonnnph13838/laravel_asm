@@ -10,7 +10,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="">/ Loại Phòng</li>
+                        <li class=""></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -48,7 +48,7 @@
                                         <td>{{ $item->created_at }}</td>
                                         <td>{{ $item->updated_at }}</td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-info">
+                                            <a href="{{route('service_detail', ['id' => $item->id])}}" class="btn btn-sm btn-info">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <a href=""  class="btn btn-sm btn-danger">

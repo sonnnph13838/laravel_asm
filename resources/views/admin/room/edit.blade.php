@@ -43,7 +43,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tạo Loại Phòng</h1>
+                    <h1 class="m-0">Cập Nhật Phòng</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
@@ -61,16 +61,38 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Tạo Mới Loại Phòng</h3>
+                            <h3 class="card-title">Cập Nhật Phòng</h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{route("kind_of_room_update",['id'=>request()->route('id')])}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route("room_update",['id'=>request()->route('id')])}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-6 offset-3">
                                     <div class="form-group">
-                                        <label for="">Tên Loại Phòng<span class="text-danger">(*)</span></label>
+                                        <label for="">Tên Phòng<span class="text-danger">(*)</span></label>
                                         <input type="text" name="name" class="form-control" id="name" value="{{$objItem->name}}">
                                     </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="">Loại Phòng<span class="text-danger">(*)</span></label>
+                                        <br>
+                                    <select class="form-select" aria-label="Default select example" name="id_kind_of_room" >
+                                    <option selected>Loại Phòng</option>
+                                    @foreach ($list_kind_of_room as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                    </select>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="">Giá<span class="text-danger">(*)</span></label>
+                                        <input type="text" name="price" class="form-control" id="price" value="{{$objItem->price}}">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="">Mô Tả<span class="text-danger">(*)</span></label>
+                                        <input type="text" name="discription" class="form-control" id="name" value="{{$objItem->discription}}">
+                                    </div>
+                                    <br>
                                     <?php //Hiển thị thông báo thành công?>
                                         @if ( Session::has('success') )
                                             <div class="alert alert-success alert-dismissible" role="alert">
@@ -107,7 +129,7 @@
                                     <br>
                                     <div class="form-group">
                                         <div class="form-check">
-                                            <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
+                                            <input class="form-check-input" id="show_menu" name="status" value="1" type="checkbox">
                                             <label class="form-check-label" for="show_menu">Hiển thị menu</label>
                                         </div>
                                     </div>
@@ -130,7 +152,37 @@
         <!-- /.content-wrapper -->
     </div>
 </div>
+    <!-- Phần nội dung riêng của action  -->
+        {{-- <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Tên người dùng <span class="text-danger">(*)</span></label>
 
+                            <div class="col-md-9 col-sm-8">
+                                <input type="text" name="name" id="name" class="form-control" value="@isset($request['name']){{ $request['name'] }}@endisset">
+                                <span id="mes_sdt"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 col-sm-4 control-label">status <span class="text-danger">(*)</span></label>
+                            <div class="col-md-9 col-sm-8">
+                                <input type="text" name="status" id="email" class="form-control" value="@isset($request['status']){{ $request['status'] }}@endisset">
+                                <span id="mes_sdt"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary"> Save</button>
+                <a href="" class="btn btn-default">Cancel</a>
+            </div>
+            <!-- /.box-footer -->
+        </form> --}}
 
     
     
