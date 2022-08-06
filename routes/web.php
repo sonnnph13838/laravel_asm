@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index')->name('Home');
 
 
 Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@getLogout']);
-Route::get('/login', 'Auth\LoginController@getLogin');
+Route::get('/login', 'Auth\LoginController@getLogin')->name('login');
 Route::post('/login', 'Auth\LoginController@postLogin');
-Route::get('/register', 'Auth\RegisterController@getRegister');
+Route::get('/register', 'Auth\RegisterController@getRegister')->name('register');
 Route::post('/register', 'Auth\RegisterController@postRegister');
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', 'HomeController@index')->name('Home');
     Route::get('/room', 'RoomController@index')->name('Kind_of_room');
     Route::get('blog', 'BlogController@index')->name('Blog');
     Route::get('about', 'AboutController@index')->name('About');

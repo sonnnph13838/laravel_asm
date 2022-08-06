@@ -9,10 +9,10 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-10 col-sm-8 parallax-fade-top">
-						<div class="hero-text">Discover your paradise under the Greek sky</div>
+						<div class="hero-text" style="color: green">CHÀO MỪNG ĐẾN VỚI HOTEL SƠN BÉO</div>
 					</div>
 					<div class="col-12 mt-3 mb-5 parallax-fade-top">
-						<div class="hero-stars">
+						<div class="hero-stars" style="color: yellow">
 							<i class="fa fa-star-o"></i>
 							<i class="fa fa-star-o"></i>
 							<i class="fa fa-star-o"></i>
@@ -20,7 +20,7 @@
 							<i class="fa fa-star-o"></i>
 						</div>
 					</div>
-					<div class="col-12 mt-3 parallax-fade-top">
+					{{-- <div class="col-12 mt-3 parallax-fade-top">
 						<div class="booking-hero-wrap">
 							<div class="row justify-content-center">
 								<div class="col-5 no-mob">
@@ -72,7 +72,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>

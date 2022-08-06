@@ -1,3 +1,8 @@
+@php
+    $objUser = \Illuminate\Support\Facades\Auth::user();
+    $id_role = $objUser->id_role;
+@endphp
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
@@ -93,12 +98,24 @@
                         <a href="#" class="social-top">fb</a>
                         <a href="#" class="social-top">tw</a>
                         <div class="lang-wrap" style="text-align: center; width:100px">
-							Tài Khoản
-							<ul>
-								<li><a href="#">Đăng Nhập</a></li>
-								<li><a href="#">Đăng Kí</a></li>
-								<li><a href="#"></a></li>
-							</ul>
+                            @if (isset($_SESSION['laravel_session'])) 
+                            Tài Khoản
+                                <ul>
+                                    <li><a href="{{route('login')}}">Đăng Nhập</a></li>
+                                    <li><a href="{{route('register')}}">Đăng Kí</a></li>
+                                    
+                                </ul>
+                            @else
+                            {{$objUser->name}}
+                            
+                                <ul>
+                                    @if ($id_role == 1)
+                                    <li><a href="{{route('login')}}">Đăng nhập admin</a></li>
+                                    @endif
+                                    <li><a href="{{route('login')}}">Cập Nhật</a></li>
+                                    <li><a href="{{route('logout')}}">Thoát</a></li>
+                                </ul>
+                            @endif
 						</div>
                     </div>
                 </div>
@@ -113,11 +130,11 @@
             <ul>
                 <li>
                     <a class="curent-page" href="{{route('Home')}}">Trang Chủ</a>
-                    <ul>
+                    {{-- <ul>
                         <li><a class="curent-page" href="index.html">Flip Slider</a></li>
                         <li><a href="index-1.html">Video Background</a></li>
                         <li><a href="index-2.html">Moving Image</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 <li>
                     <a href="{{route('Kind_of_room')}}">Phòng</a>
