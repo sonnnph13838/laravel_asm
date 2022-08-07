@@ -264,7 +264,7 @@
 								<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
 								<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
 								<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
-								<a href="{{route('room_details', ['id' => $item->id])}}">full info</a>
+								<a href="">full info</a>
 							</div>
 						</div>
 					</div>
