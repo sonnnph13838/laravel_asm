@@ -91,11 +91,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 px-0 px-md-3 pl-1 py-3">
-                        <span class="call-top">call us:</span> <a href="#" class="call-top">(381) 60 422 4256</a>
+                        <span class="call-top">ALO</span> <a href="#" class="call-top">0123456789</a>
                     </div>
                     <div class="col-6 px-0 px-md-3 py-3 text-right">
-                        <a href="#" class="social-top">fb</a>
-                        <a href="#" class="social-top">tw</a>
                         <div class="lang-wrap" style="text-align: center; width:100px">
                             @if (isset($_SESSION['laravel_session'])) 
                             Tài Khoản
@@ -124,7 +122,7 @@
         <div class="menu">
             <a href="index.html">
                 <div class="logo">
-                    <img src="{{asset('img/logo.png')}}" alt="">
+                    <img src="" alt="">
                 </div>
             </a>
             <ul>

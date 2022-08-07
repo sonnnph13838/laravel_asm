@@ -261,10 +261,10 @@
 							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
 							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 130$</a>
 							<div class="room-icons mt-4 pt-4">
-								<img src="img/5.svg" alt="">
-								<img src="img/2.svg" alt="">
-								<img src="img/3.svg" alt="">
-								<a href="rooms-gallery.html">full info</a>
+								<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
+								<a href="{{route('room_details', ['id' => $item->id])}}">full info</a>
 							</div>
 						</div>
 					</div>
