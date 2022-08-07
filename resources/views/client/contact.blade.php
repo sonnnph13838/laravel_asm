@@ -77,36 +77,36 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Address:</p>
+							<p class="color-black">Địa Chỉ:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>Avenue Str. 328</p>
+							<p>Trịnh Văn Bô</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">City:</p>
+							<p class="color-black">Thành Phố:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>Thessaloniki</p>
+							<p>Hà Nội</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Check-In:</p>
+							<p class="color-black">Mở cửa:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>14:00 pm</p>
+							<p>4:00 am</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Phone:</p>
+							<p class="color-black">Điện Thoại:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>+21 60 374 7537</p>
+							<p>0123456789</p>
 						</div>
 					</div>
 					<div class="address">
@@ -114,29 +114,29 @@
 							<p class="color-black">Email:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>info@hotel.com</p>
+							<p>sonpeo@hotel.com</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Check-Out:</p>
+							<p class="color-black">Đóng Cửa:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>11:00 am</p>
+							<p>12:00 pm</p>
 						</div>
 					</div>
 				</div>
 				<div class="section clearfix"></div>
 				<div class="col-md-8 text-center mt-5" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.2s">
-					<p class="mb-0"><em>available at: 8am - 10pm</em></p>
-					<h2 class="text-opacity">+21 60 374 7537</h2>
+					<p class="mb-0"><em>Hỗ Trợ 24/24</em></p>
+					<h2 class="text-opacity">0123456789</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="subscribe-home">
-						<input type="text" placeholder="your email here"/>
-						<button data-lang="en">subscribe</button>
+						<input type="text" placeholder="Nhập email"/>
+						<button data-lang="en">Đăng Ký</button>
 					</div>
 				</div>
 			</div>
