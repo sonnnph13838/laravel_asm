@@ -1,6 +1,5 @@
 @php
     $objUser = \Illuminate\Support\Facades\Auth::user();
-    $id_role = $objUser->id_role;
 @endphp
 
 <!DOCTYPE html>
@@ -106,12 +105,13 @@
                                     
                                 </ul>
                             @else
-                            {{$objUser->name}}
-                            
+                                @if(isset($_SESION['laraval_session']))
+                                 Tài khoản
+                                @else
+                                {{$objUser->name}} 
+                                @endif
                                 <ul>
-                                    @if ($id_role == 1)
-                                    <li><a href="{{route('login')}}">Đăng nhập admin</a></li>
-                                    @endif
+                                    <li><a href="{{route('admin')}}">Đăng nhập admin</a></li>
                                     <li><a href="{{route('login')}}">Cập Nhật</a></li>
                                     <li><a href="{{route('logout')}}">Thoát</a></li>
                                 </ul>
