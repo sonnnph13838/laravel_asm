@@ -5,8 +5,8 @@
 
 	<div class="section big-55-height over-hide z-bigger">
 	
-		<div class="parallax parallax-top" >
-			<img src="{{asset('img/blogban.jpg')}}" alt="" style="width:100%" height="100%">
+		<div class="parallax parallax-top" style="background-image: url('https://ivang-design.com/thalia/img/explore.jpg')">
+
 		</div>
 		<div class="dark-over-pages"></div>
 	

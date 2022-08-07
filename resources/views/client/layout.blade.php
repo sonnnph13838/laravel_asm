@@ -14,7 +14,7 @@
     <!-- Basic Page Needs
 	================================================== -->
     <meta charset="utf-8">
-    <title>Thalia</title>
+    <title>SƠN PÉO</title>
     <meta name="description" content="Professional Creative Template" />
     <meta name="author" content="IG Design">
     <meta name="keywords" content="ig design, website, design, html5, css3, jquery, creative, clean, animated, portfolio, blog, one-page, multi-page, corporate, business," />
@@ -124,7 +124,7 @@
         <div class="menu">
             <a href="index.html">
                 <div class="logo">
-                    <img src="{{ asset('img/logo.png')}}" alt="">
+                    <img src="{{asset('img/logo.png')}}" alt="">
                 </div>
             </a>
             <ul>
@@ -166,7 +166,7 @@
                     <a href="{{route('contact')}}">Liên Hệ</a>
                 </li>
                 <li>
-                    <a href="search.html"><span>book now</span></a>
+                    <a href="{{route('booked', ['id_user' => $objUser->id])}}"><span>BOOKED</span></a>
                 </li>
             </ul>
         </div>

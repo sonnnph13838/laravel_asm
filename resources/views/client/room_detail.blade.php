@@ -212,7 +212,7 @@
 										</div>
 									</div>
 									<div class="col-12 col-md-6 col-lg-12 pt-5">
-										<h6 class="color-white mb-3">Services:</h6>
+										{{-- <h6 class="color-white mb-3">Services:</h6>
 										<div class="form-group" name="id_service" value="@isset($request['id_service']){{ $request['id_service'] }}@endisset">
 											@foreach ($list_service as $item)
 											<div class="form-check">
@@ -220,8 +220,9 @@
 												<label class="form-check-label" for="show_menu">{{$item->name}}</label>
 											</div>
 											@endforeach
-										</div>
+										</div> --}}
 											<div>
+												<input type="hidden" name="id_service" value="1">
 											<input type="hidden" name="id_user" value="{{$objUser->id}}">
 											<input type="hidden" name="id_room" value="{{$room->id}}">
 											</div>								

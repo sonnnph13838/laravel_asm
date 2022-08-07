@@ -105,7 +105,7 @@ class RoomController extends Controller
         $this->v['room'] = $obj->loadOne($id);
         $obj = new Service();
         $this->v['list_service'] = $obj->loadList();
-        $method_route = 'booking';
+        $method_route = 'Home';
         if ($request->isMethod('post')) {
             $param = [];
             $param['cols'] = $request->post();

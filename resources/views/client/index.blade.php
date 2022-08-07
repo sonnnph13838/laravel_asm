@@ -9,7 +9,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-10 col-sm-8 parallax-fade-top">
-						<div class="hero-text" style="color: green">CHÀO MỪNG ĐẾN VỚI HOTEL SƠN BÉO</div>
+						<div class="hero-text" style="color: white">CHÀO MỪNG ĐẾN VỚI HOTEL SƠN BÉO</div>
 					</div>
 					<div class="col-12 mt-3 mb-5 parallax-fade-top">
 						<div class="hero-stars" style="color: yellow">

@@ -16,4 +16,10 @@ class List_bookingController extends Controller
     {
         $this->v = [];
     }
+    public function booked($id_user)
+    {
+        $opj = new List_booking();
+        $this->v['list_book'] = $opj->loadList($id_user);
+        return view("client.booked", $this->v);
+    }
 }
