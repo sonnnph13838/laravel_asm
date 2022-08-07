@@ -122,7 +122,7 @@
         <div class="menu">
             <a href="index.html">
                 <div class="logo">
-                    <img src="" alt="">
+                    <img src="{{asset('img/logos/logo1.png')}}" alt="">
                 </div>
             </a>
             <ul>
@@ -180,20 +180,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 text-center text-md-left">
-                    <img src="{{ asset('img/logo.png')}}" alt="">
-                    <p class="color-grey mt-4">Avenue Street 3284<br>Thessaloniki</p>
+                    <img src="{{ asset('img/logos/logo1.png')}}" alt="">
+                    <p class="color-grey mt-4">Trịnh Văn Bô<br>Hà Nội</p>
                 </div>
                 <div class="col-md-4 text-center text-md-left">
-                    <h6 class="color-white mb-3">information</h6>
+                    <h6 class="color-white mb-3">Thông Tin</h6>
                     <a href="tandc.html">terms &amp; conditions</a>
-                    <a href="services.html">services</a>
-                    <a href="restaurant.html">restaurant</a>
-                    <a href="testimonials.html">testimonials</a>
-                    <a href="gallery.html">gallery &amp; images</a>
+                    <a href="services.html">Dịch Vụ</a>
+                    <a href="restaurant.html">Nhà Hàng</a>
                 </div>
                 <div class="col-md-5 mt-4 mt-md-0 text-center text-md-left logos-footer">
-                    <h6 class="color-white mb-3">about us</h6>
-                    <p class="color-grey mb-4">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+                    <h6 class="color-white mb-3">Giới Thiệu</h6>
+                    <p class="color-grey mb-4">Chào Mừng Đến Với Khách Sạn Sơn Péo</p>
                     <img src="{{ asset('img/logos/1.png')}}" alt="">
                     <img src="{{ asset('img/logos/2.png')}}" alt="">
                     <img src="{{ asset('img/logos/3.png')}}" alt="">

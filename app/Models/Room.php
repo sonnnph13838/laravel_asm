@@ -28,6 +28,13 @@ class Room extends Model
         $lists = $query->paginate(10);
         return $lists;
     }
+    public function loadListTop4($param = [])
+    {
+        $query = DB::table($this->table)
+            ->select($this->fillable);
+        $lists = $query->paginate(4);
+        return $lists;
+    }
     public function loadListOfCate($id_kind_of_room)
     {
         $query = DB::table($this->table)

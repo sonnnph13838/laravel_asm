@@ -56,10 +56,9 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="project-nav-wrap">
-						<a href="#"><div class="left-nav" data-scroll-reveal="enter left move 60px over 0.9s after 0.1s">new<div class="text-on-hover">latest news</div></div></a>
-						
-						<a href="#"><div class="right-nav" data-scroll-reveal="enter right move 60px over 0.9s after 0.1s">old<div class="text-on-hover">older news</div></div></a>
-						{{$blog->links()}}
+						<div class="col d-flex justify-content-center">
+							{{$blog->links()}}
+						</div>
 					</div>
 				</div>
 			</div>

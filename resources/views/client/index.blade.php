@@ -258,111 +258,75 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8 align-self-center">
-					<div class="subtitle with-line text-center mb-4">elegant suites</div>
-					<h3 class="text-center padding-bottom-small">Unpretentious luxury</h3>
+					<div class="subtitle with-line text-center mb-4">Sang Trọng</div>
+					<h3 class="text-center padding-bottom-small">Dịch Vụ</h3>
 				</div>
 				<div class="section clearfix"></div>
 				<div class="col-sm-6 col-lg-4">
 					<div class="services-box text-center">
-						<img src="img/1.svg" alt="">
-						<h5 class="mt-2">smoking free</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/1.svg" alt="">
+						<h5 class="mt-2">Không Hút Thuốc</h5>
+						<p class="mt-3">Phòng Không Hút Thuốc</p>
+						<a class="mt-1 btn btn-primary" href="services.html">chi Tiết</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mt-5 mt-sm-0">
 					<div class="services-box text-center">
-						<img src="img/2.svg" alt="">
-						<h5 class="mt-2">king beds</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
+						<h5 class="mt-2">Giường King</h5>
+						<p class="mt-3">Giường rộng rãi , sang trọng và thoải mãi.</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mt-5 mt-lg-0">
 					<div class="services-box text-center">
-						<img src="img/3.svg" alt="">
-						<h5 class="mt-2">Yacht rental</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
+						<h5 class="mt-2">Thuê Du Thuyền</h5>
+						<p class="mt-3">Dịch vụ thuê du thuyền, sang trọng.</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mt-5">
 					<div class="services-box text-center">
-						<img src="img/4.svg" alt="">
-						<h5 class="mt-2">welcome drink</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/4.svg" alt="">
+						<h5 class="mt-2">Dồ Uống Free</h5>
+						<p class="mt-3">cung cấp đồ uống miễn phí</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mt-5">
 					<div class="services-box text-center">
-						<img src="img/5.svg" alt="">
-						<h5 class="mt-2">swimming pool</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
+						<h5 class="mt-2">Hồ Bơi Free</h5>
+						<p class="mt-3">Hồ bơi sang trọng</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mt-5">
 					<div class="services-box text-center">
-						<img src="img/6.svg" alt="">
-						<h5 class="mt-2">food included</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="	https://ivang-design.com/thalia/img/6.svg" alt="">
+						<h5 class="mt-2">Thức Ăn đéo free</h5>
+						<p class="mt-3">Thức ăn sang trọng</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="section padding-top-bottom-big over-hide">
-		<div class="parallax" style="background-image: url('img/4.jpg')"></div>
-		<div class="section z-bigger">		
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="row justify-content-center">
-							<div class="col-md-6 col-xl-4 px-sm-0">
-								<div class="booking-sep-wrap">
-									<div class="input-daterange input-group" id="flight-datepicker-1">
-										<div class="form-item">
-											<span class="fontawesome-calendar"></span>
-											<input class="input-sm" type="text" autocomplete="off" id="start-date" name="start" placeholder="check-in" data-date-format="DD, MM d"/>
-											<span class="date-text date-depart"></span>
-										</div>
-										<div class="form-item">
-											<span class="fontawesome-calendar"></span>
-											<input class="input-sm" type="text" autocomplete="off" id="end-date" name="end" placeholder="check-out" data-date-format="DD, MM d"/>
-											<span class="date-text date-return"></span>
-										</div>
-									</div>	
-								</div>
-							</div>
-							<div class="col-md-3 col-xl-2 px-sm-0">
-								<div class="quantity">
-									<input type="number" min="1" max="9999" step="1" value="1" >
-								</div>	
-							</div>	
-							<div class="col-md-3 col-xl-2 px-sm-0">
-								<a class="booking-button-big" href="search.html">check<br>availability</a>
-							</div>	
-						</div>	
-					</div>
-				</div>
-			</div>					
-		</div>
-	</div>
 	
 	<div class="section padding-top-bottom over-hide background-grey">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8 align-self-center">
-					<div class="subtitle with-line text-center mb-4">luxury</div>
-					<h3 class="text-center padding-bottom-small">Our rooms</h3>
+					<div class="subtitle with-line text-center mb-4">Sang Chảnh</div>
+					<h3 class="text-center padding-bottom-small">Phòng Mới</h3>
 				</div>
 				<div class="section clearfix"></div>
-				<div class="col-md-6">
+				@foreach ($list_room as $item)
+					<div class="col-md-6">
 					<div class="room-box background-white">
-						<div class="room-name">suite tanya</div>
+						<div class="room-name">{{$item->name}}</div>
 						<div class="room-per">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -370,165 +334,48 @@
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 						</div>
-						<img src="img/room3.jpg" alt="">
+						<img src="{{asset('img/home3.jpg')}}" alt="">
 						<div class="room-box-in">
-							<h5 class="">pool suite</h5>
+							<h5 class="">{{$item->name}}</h5>
 							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 130$</a>
+							<a class="mt-1 btn btn-primary" href="{{route('room_detail', ['id' => $item->id])}}">Đặt Ngay {{$item->price}}</a>
 							<div class="room-icons mt-4 pt-4">
-								<img src="img/5.svg" alt="">
-								<img src="img/2.svg" alt="">
-								<img src="img/3.svg" alt="">
-								<img src="img/1.svg" alt="">
-								<a href="rooms-gallery.html">full info</a>
+								<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
+								<a href="{{route('room_detail', ['id' => $item->id])}}">Chi Tiết</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 mt-4 mt-md-0">
-					<div class="room-box background-white">
-						<div class="room-name">suite helen</div>
-						<div class="room-per">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-o"></i>
-						</div>
-						<img src="img/room4.jpg" alt="">
-						<div class="room-box-in">
-							<h5 class="">small room</h5>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 80$</a>
-							<div class="room-icons mt-4 pt-4">
-								<img src="img/4.svg" alt="">
-								<img src="img/2.svg" alt="">
-								<img src="img/6.svg" alt="">
-								<img src="img/3.svg" alt="">
-								<a href="rooms-gallery.html">full info</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 mt-4">
-					<div class="room-box background-white">
-						<div class="room-name">suite andrea</div>
-						<div class="room-per">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<img src="img/room5.jpg" alt="">
-						<div class="room-box-in">
-							<h5 class="">Apartment</h5>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 110$</a>
-							<div class="room-icons mt-4 pt-4">
-								<img src="img/5.svg" alt="">
-								<img src="img/2.svg" alt="">
-								<img src="img/3.svg" alt="">
-								<img src="img/6.svg" alt="">
-								<a href="rooms-gallery.html">full info</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 mt-4">
-					<div class="room-box background-white">
-						<div class="room-name">suite diana</div>
-						<div class="room-per">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<img src="img/room6.jpg" alt="">
-						<div class="room-box-in">
-							<h5 class="">big Apartment</h5>
-							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 160$</a>
-							<div class="room-icons mt-4 pt-4">
-								<img src="img/5.svg" alt="">
-								<img src="img/2.svg" alt="">
-								<img src="img/3.svg" alt="">
-								<img src="img/6.svg" alt="">
-								<a href="rooms-gallery.html">full info</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+
 			</div>	
 		</div>		
 	</div>
-	
-	<div class="section padding-top-bottom-big over-hide">
-		<div class="parallax" style="background-image: url('img/5.jpg')"></div>
-		<div class="section z-bigger">		
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-8">
-						<div id="owl-sep-1" class="owl-carousel owl-theme">								 
-							<div class="item">						
-								<div class="quote-sep">	
-									<h4>"Chilling out on the bed in your hotel room watching television, while wearing your own pajamas, is sometimes the best part of a vacation."</h4>
-									<h6>Jason Salvatore</h6>	
-								</div>											
-							</div>											
-							<div class="item">					
-								<div class="quote-sep">
-									<h4>"Every good day starts off with a cappuccino, and there's no place better to enjoy some frothy caffeine than at the Thalia Hotel."</h4>
-									<h6>Terry Mitchell</h6>	
-								</div>									
-							</div>											
-							<div class="item">					
-								<div class="quote-sep">
-									<h4>"I still enjoy traveling a lot. I mean, it amazes me that I still get excited in hotel rooms just to see what kind of shampoo they've left me."</h4>
-									<h6>Michael Brighton</h6>
-								</div>										
-							</div>								 
-						</div>	
-					</div>
-				</div>
-			</div>					
-		</div>
-	</div>
-	
-	<div class="section padding-top-bottom-small background-dark-2 over-hide">		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">	
-					<h5 class="color-grey">A new dimension of luxury.</h5>
-					<p class="color-white mt-3 mb-3"><em>our presentation, 0:48 min</em></p>
-					<a href="https://vimeo.com/54851233" class="video-button" data-fancybox><i class="fa fa-play"></i></a>
-				</div>
-			</div>
-		</div>	
-	</div>
+
 	
 	<div class="section padding-top-bottom background-grey over-hide">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8 align-self-center">
-					<div class="subtitle with-line text-center mb-4">Excellent restaurant</div>
-					<h3 class="text-center padding-bottom-small">Dining &amp; Bars</h3>
+					<div class="subtitle with-line text-center mb-4">Nhà Hàng</div>
+					<h3 class="text-center padding-bottom-small">Ăn Uống &amp; Bars</h3>
 				</div>
 				<div class="section clearfix"></div>
 			</div>
 			<div class="row background-white p-0 m-0">
 				<div class="col-xl-6 p-0">
 					<div class="img-wrap" id="rev-3">
-						<img src="img/rest-1.jpg" alt="">
+						<img src="	https://ivang-design.com/thalia/img/rest-1.jpg" alt="">
 					</div>
 				</div>
 				<div class="col-xl-6 p-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-9 pt-4 pt-xl-0 pb-5 pb-xl-0 text-center">
-							<h5 class="">beach restaurant</h5>
+							<h5 class="">Nhà Hàng Bãi Biển</h5>
 							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="restaurant.html">explore</a>
+							<a class="mt-1 btn btn-primary" href="restaurant.html">Khám Phá</a>
 						</div>
 					</div>	
 				</div>
@@ -537,15 +384,15 @@
 				<div class="col-xl-6 p-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-9 pt-4 pt-xl-0 pb-5 pb-xl-0 text-center">
-							<h5 class="">pool restaurant</h5>
+							<h5 class="">Nhà Hàng Hồ Bơi</h5>
 							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-							<a class="mt-1 btn btn-primary" href="restaurant.html">explore</a>
+							<a class="mt-1 btn btn-primary" href="restaurant.html">Khám Phá</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-6 order-first order-xl-last p-0">
 					<div class="img-wrap" id="rev-4">
-						<img src="img/rest-2.jpg" alt="">
+						<img src="https://ivang-design.com/thalia/img/rest-2.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -556,43 +403,43 @@
 		<div class="container">
 			<div class="row justify-content-center padding-bottom-smaller">
 				<div class="col-md-8">
-					<div class="subtitle with-line text-center mb-4">get in touch</div>
-					<h3 class="text-center padding-bottom-small">drop us a line</h3>
+					<div class="subtitle with-line text-center mb-4">Liên Lạc</div>
+					<h3 class="text-center padding-bottom-small">Liên Lạc Với Chúng Tôi</h3>
 				</div>
 				<div class="section clearfix"></div>
 				<div class="col-md-6 col-lg-4">
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Address:</p>
+							<p class="color-black">Địa Chỉ:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>Avenue Str. 328</p>
+							<p>Trịnh Văn Bô</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">City:</p>
+							<p class="color-black">Thành Phố:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>Thessaloniki</p>
+							<p>Hà Nội</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Check-In:</p>
+							<p class="color-black">Mở cửa:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>14:00 pm</p>
+							<p>4:00 am</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Phone:</p>
+							<p class="color-black">Điện Thoại:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>+21 60 374 7537</p>
+							<p>0123456789</p>
 						</div>
 					</div>
 					<div class="address">
@@ -600,29 +447,29 @@
 							<p class="color-black">Email:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>info@hotel.com</p>
+							<p>sonpeo@hotel.com</p>
 						</div>
 					</div>
 					<div class="address">
 						<div class="address-in text-left">
-							<p class="color-black">Check-Out:</p>
+							<p class="color-black">Đóng Cửa:</p>
 						</div>
 						<div class="address-in text-right">
-							<p>11:00 am</p>
+							<p>12:00 pm</p>
 						</div>
 					</div>
 				</div>
 				<div class="section clearfix"></div>
 				<div class="col-md-8 text-center mt-5" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.2s">
-					<p class="mb-0"><em>available at: 8am - 10pm</em></p>
-					<h2 class="text-opacity">+21 60 374 7537</h2>
+					<p class="mb-0"><em>Hỗ Trợ 24/24</em></p>
+					<h2 class="text-opacity">0123456789</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="subscribe-home">
-						<input type="text" placeholder="your email here"/>
-						<button data-lang="en">subscribe</button>
+						<input type="text" placeholder="Nhập email"/>
+						<button data-lang="en">Đăng Ký</button>
 					</div>
 				</div>
 			</div>
