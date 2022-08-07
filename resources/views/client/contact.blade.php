@@ -1,3 +1,31 @@
+<style>
+	form .name{
+		width: 45%;
+		margin-right: 50px;
+		text-align: center;
+		border: none;
+    	border-bottom: 1px solid #6dc234;
+	}
+	form .email{
+		width: 45%;
+		text-align: center;
+		border: none;
+    	border-bottom: 1px solid #6dc234;
+	}
+	form .mess{
+		width: 100%;
+		margin-top: 50px;
+		text-align: center;
+		border: none;
+    	border-bottom: 1px solid #6dc234;
+	}
+	form #send{
+		margin-left: 90px;
+		margin-top: 20px;
+		border: none;
+		border-bottom: 1px solid #6dc234;
+	}
+</style>
 @extends('client.layout')
 @section('content')
 	<!-- Primary Page Layout
@@ -5,49 +33,34 @@
 
 	<div class="section big-55-height over-hide z-bigger">
 	
-		<div class="parallax parallax-top" style="background-image: url('img/gallery/10.jpg')"></div>
+		<div class="parallax parallax-top" style="background-image: url('https://ivang-design.com/thalia/img/gallery/10.jpg')"></div>
 		<div class="dark-over-pages"></div>
 	
 		<div class="hero-center-section pages">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 parallax-fade-top">
-						<div class="hero-text">Get in Touch</div>
+						<div class="hero-text">Liên Hệ</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="section padding-top-bottom-smaller background-dark-2 over-hide">		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">	
-					<h5 class="color-grey">A new dimension of luxury.</h5>
-					<p class="color-white mt-3 mb-3"><em>our presentation, 0:48 min</em></p>
-					<a href="https://vimeo.com/54851233" class="video-button" data-fancybox><i class="fa fa-play"></i></a>
-				</div>
-			</div>
-		</div>	
-	</div>
 	
 	<div class="section padding-top z-bigger">
 		<div class="container">
 			<div class="row justify-content-center padding-bottom-smaller">
 				<div class="col-md-8">
-					<div class="subtitle with-line text-center mb-4">get in touch</div>
-					<h3 class="text-center padding-bottom-small">drop us a line</h3>
+					<div class="subtitle with-line text-center mb-4">Liên Hệ Với Chúng Tôi</div>
+					<h3 class="text-center padding-bottom-small" style="font-size: 50px">Liên Hệ</h3>
 				</div>
 				<div class="section clearfix"></div>
 				<form action="" method="post" >
 					@csrf
-					<input name="name" type="text" placeholder="Your Name: *" autocomplete="off" value="@isset($request['name']){{ $request['name'] }}@endisset"/ >
-
-
-					<input name="email" type="text"  placeholder="E-Mail: *" autocomplete="off" value="@isset($request['email']){{ $request['email'] }}@endisset"/>
-
-
-					<textarea name="messages" placeholder="Tell Us Everything" value="@isset($request['messages']){{ $request['messages'] }}@endisset"></textarea>
+					<input name="name" class="name" type="text" placeholder="Your Name: *" autocomplete="off" value="@isset($request['name']){{ $request['name'] }}@endisset"/ >
+					<input name="email" class="email" type="text"  placeholder="E-Mail: *" autocomplete="off" value="@isset($request['email']){{ $request['email'] }}@endisset"/>
+					<textarea name="messages" class="mess" placeholder="Tell Us Everything" value="@isset($request['messages']){{ $request['messages'] }}@endisset"></textarea>
 
 				<div class="section clearfix"></div>
 				<div class="section clearfix"></div>
