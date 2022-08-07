@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('about', 'AboutController@index')->name('About');
     Route::match(['get', 'post'], 'contact', 'ContactController@add')->name('contact');
     Route::match(['get', 'post'], '/room_detail/{id}', 'RoomController@booking')->name('room_details');
+    Route::get('/room_by_cate/{id_kind_of_room}', 'RoomController@roombycate')->name('room_by_cate');
     //admin
     Route::get('/admin', 'AdminController@index')->name('admin');
     //loai phong

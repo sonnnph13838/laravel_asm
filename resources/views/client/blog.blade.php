@@ -5,14 +5,16 @@
 
 	<div class="section big-55-height over-hide z-bigger">
 	
-		<div class="parallax parallax-top" style="background-image: url('img/explore.jpg')"></div>
+		<div class="parallax parallax-top" >
+			<img src="{{asset('img/blogban.jpg')}}" alt="" style="width:100%" height="100%">
+		</div>
 		<div class="dark-over-pages"></div>
 	
 		<div class="hero-center-section pages">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 parallax-fade-top">
-						<div class="hero-text">Our News</div>
+						<div class="hero-text">Bài Viết</div>
 					</div>
 				</div>
 			</div>
@@ -24,7 +26,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="subtitle with-line text-center mb-4">journal</div>
-					<h3 class="text-center padding-bottom-small">latest news</h3>
+					<h3 class="text-center padding-bottom-small">Mới Nhát</h3>
 				</div>
 				<div class="section clearfix"></div>
 				 @foreach ($blog as $item)
