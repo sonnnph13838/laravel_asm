@@ -46,6 +46,9 @@ class RoomController extends Controller
             $param = [];
             $param['cols'] = $request->post();
             unset($param['cols']['_token']);
+            if ($request->hasFile('image') && $request->file('image')->isValid()) {
+                $param['cols']['image'] = $this->uploadFile($request->file('image'));
+            }
             $modelTest = new Room();
             $res = $modelTest->saveNew($param);
             if ($res == null) {
@@ -75,6 +78,21 @@ class RoomController extends Controller
         $params = [];
         $params['cols'] = $request->post();
         unset($params['cols']['_token']);
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $params['cols']['image'] = $this->uploadFile($request->file('image'));
+        }
+        if ($request->hasFile('image1') && $request->file('image1')->isValid()) {
+            $params['cols']['image1'] = $this->uploadFile($request->file('image1'));
+        }
+        if ($request->hasFile('image2') && $request->file('image2')->isValid()) {
+            $params['cols']['image2'] = $this->uploadFile($request->file('image2'));
+        }
+        if ($request->hasFile('image3') && $request->file('image3')->isValid()) {
+            $params['cols']['image3'] = $this->uploadFile($request->file('image3'));
+        }
+        if ($request->hasFile('image4') && $request->file('image4')->isValid()) {
+            $params['cols']['image4'] = $this->uploadFile($request->file('image4'));
+        }
         $objRoom = new Room();
         $objItem = $objRoom->loadOne($id);
         $params['cols']['id'] = $id;
@@ -112,5 +130,10 @@ class RoomController extends Controller
             }
         }
         return view("client.room_detail", $this->v,);
+    }
+    public function uploadFile($file)
+    {
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        return $file->storeAs('images', $fileName, 'public');
     }
 }

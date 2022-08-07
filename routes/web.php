@@ -20,7 +20,7 @@ Route::get('/login', 'Auth\LoginController@getLogin');
 Route::post('/login', 'Auth\LoginController@postLogin');
 Route::get('/register', 'Auth\RegisterController@getRegister');
 Route::post('/register', 'Auth\RegisterController@postRegister');
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
     Route::get('/', 'HomeController@index')->name('Home');
     Route::get('/room', 'RoomController@index')->name('Kind_of_room');
     Route::get('blog', 'BlogController@index')->name('Blog');
@@ -52,4 +52,4 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], 'admin/banner_add', 'BannerController@add')->name('banner_add');
     Route::get('/admin/banner_detail/{id}', 'BannerController@detail')->name('banner_detail');
     Route::post('/admin/banner_update/{id}', 'BannerController@update')->name('banner_update');
-});
+// });
