@@ -239,6 +239,7 @@
     <script src="{{ asset('js/reveal-home.js')}}">
     </script>
     <script src="{{ asset('js/custom.js')}}"></script>
+    @yield('script')
     <!-- End Document
 ================================================== -->
 </body>

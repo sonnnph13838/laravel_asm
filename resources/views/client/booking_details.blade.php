@@ -9,6 +9,11 @@
     #customers th {
         border: 1px solid #ddd;
         padding: 8px;
+        
+    }
+
+    .owl-carousel img{
+        width: 100%;
     }
 
     #customers tr:nth-child(even) {
@@ -27,6 +32,8 @@
         color: white;
     }
 </style>
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}" />
+        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css')}}" />
 @extends('client.layout')
 @section('content')
 <div class="section big-55-height over-hide z-bigger">
@@ -55,6 +62,7 @@
                         <tr>
                             <th>Tên Phòng</th>
                             <th>Giá</th>
+                            <th>Ảnh</th>
                             <th>Checkin-Date</th>
                             <th>Checkout-Date</th>
                             <th>Số lượng</th>
@@ -63,6 +71,13 @@
                                 <tr>
                                     <td>{{$room->name}}</td>
                                     <td>{{$room->price}}</td>
+                                    <td class="owl-carousel" style="width: 200px; height: 200px;" >
+                                        <img src="{{asset('img/image.jpg')}}" alt="">
+                                        <img src="{{asset('img/image1.jpg')}}" alt="">
+                                        <img src="{{asset('img/image2.jpg')}}" alt="">
+                                        <img src="{{asset('img/image3.jpg')}}" alt=""> 
+                                        <img src="{{asset('img/image4.jpg')}}" alt="">
+                                    </td>
                                     <td>{{$booking->checkin_date}}</td>
                                     <td>{{$booking->checkout_date}}</td>
                                     <td>{{$booking->quantity}}</td>
@@ -73,4 +88,15 @@
         </div>
     </div>
 </section>
+@endsection
+@section('script')
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+
+    <script>
+                $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            items:1,
+        })
+    </script>
 @endsection
