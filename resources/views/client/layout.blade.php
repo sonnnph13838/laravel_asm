@@ -104,7 +104,7 @@
                                 </ul>
                             @else
                                 @if(isset($_SESION['laraval_session']))
-                                 Tài khoản
+                                Tài khoản
                                 @else
                                 {{$objUser->name}} 
                                 @endif
@@ -164,7 +164,12 @@
                     <a href="{{route('contact')}}">Liên Hệ</a>
                 </li>
                 <li>
-                    <a href="{{route('booked', ['id_user' => $objUser->id])}}"><span>BOOKED</span></a>
+                    @if(isset($_SESION['laraval_session']))   
+                    <a href="{{route('login')}}"><span>BOOKED</span></a>
+                   
+                    @else
+                         <a href="{{route('booked', ['id_user' => $objUser->id])}}"><span>BOOKED</span></a>     
+                    @endif
                 </li>
             </ul>
         </div>

@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], '/room_detail/{id}', 'RoomController@booking')->name('room_details');
     Route::get('/room_by_cate/{id_kind_of_room}', 'RoomController@roombycate')->name('room_by_cate');
     Route::get('/booked/{id_user}', 'List_bookingController@booked')->name('booked');
+    Route::get('/booking_details/{id}', 'List_bookingController@bookingDetail')->name('booking_details');
     //admin
     Route::get('/admin', 'AdminController@index')->name('admin');
     //loai phong

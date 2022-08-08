@@ -1,3 +1,27 @@
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
 @extends('client.layout')
 @section('content')
     <div class="section big-55-height over-hide z-bigger">
@@ -22,26 +46,24 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="shoping__cart__table">
-                    <table>
-                        <thead>
+                    <table id="customers">
                             <tr>
-                                <th class="shoping__product"></th>
-                                <th>Tên Sản Phẩm</th>
-                                <th>Giá</th>
-                                <th>Ngày Tạo</th>
-                                <th>Mua Ngay</th>
+                                <th>STT</th>
+                                <th>Checkin-Date</th>
+                                <th>Checkout-Date</th>
+                                <th>Số lượng</th>
                                 <th></th>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($list_book as $item)
-                            <tr>
-                                <td>{{$item->checkin_date}}</td>
-                                <td>{{$item->checkout_date}}</td>
+                        @foreach ($list_book as $index =>$item) 
+                            <tr>    
+                                <th>{{$index + 1}}</th>
+                                <th>{{$item->checkin_date}}</th>
+                                <th>{{$item->checkout_date}}</th>
+                                <th>{{$item->adults}}</th>
+                                <th>{{$item->children}}</th>
+                                <th><a href="{{route('booking_details', ['id' => $item->id])}}">Chi tiết</a></th>
                             </tr>
-                            @endforeach
-                                
-                        </tbody>
+                        @endforeach
                     </table>
                 </div>
             </div>

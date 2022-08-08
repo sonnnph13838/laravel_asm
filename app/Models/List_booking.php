@@ -26,4 +26,11 @@ class List_booking extends Model
         $lists = $query->paginate(10);
         return $lists;
     }
+    public function bookingDetail($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->first();
+        return $lists;
+    }
 }
