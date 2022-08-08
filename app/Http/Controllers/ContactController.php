@@ -14,6 +14,12 @@ class ContactController extends Controller
     {
         $this->v = [];
     }
+    public function index()
+    {
+        $opj = new Contact();
+        $this->v['list_contact'] = $opj->loadList();
+        return view("admin/contact.index", $this->v,);
+    }
     public function add(Request $request)
     {
         $method_route = 'contact';

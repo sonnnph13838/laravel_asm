@@ -57,4 +57,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/banner_detail/{id}', 'BannerController@detail')->name('banner_detail');
     Route::get('/admin/banner_delete/{id}', 'BannerController@deleteBanner')->name('banner_delete');
     Route::post('/admin/banner_update/{id}', 'BannerController@update')->name('banner_update');
+
+    //contact
+    Route::get('/admin/contact_list', 'ContactController@index')->name('list_contact');
+    Route::get('/admin/contact_delete/{id}', 'ContactController@deleteContact')->name('contact_delete');
+
+    //list-booking
+    Route::get('/admin/booking_list', 'List_bookingController@index')->name('list_booking');
+    Route::get('/admin/booking_delete/{id}', 'List_bookingController@deleteBooking')->name('booking_delete');
 });

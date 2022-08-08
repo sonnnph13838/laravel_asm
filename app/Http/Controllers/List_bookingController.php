@@ -16,6 +16,12 @@ class List_bookingController extends Controller
     {
         $this->v = [];
     }
+    public function index()
+    {
+        $opj = new List_booking();
+        $this->v['list_booking'] = $opj->loadList1();
+        return view("admin/list_booking.index", $this->v,);
+    }
     public function booked($id_user)
     {
         $opj = new Room();
