@@ -266,8 +266,31 @@
                   <p>Danh Sách</p>
                 </a>
               </li>
-              <li class="nav-item">
+             <li class="nav-item">
                 <a href="{{route('service_add')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm Mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Danh sách Banner
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('list_banner')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh Sách</p>
+                </a>
+              </li>
+             <li class="nav-item">
+                <a href="{{route('banner_add')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Mới</p>
                 </a>
@@ -334,5 +357,6 @@
 <script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dist/js/pages/dashboard2.js')}}"></script>
+@yield('script')
 </body>
 </html>

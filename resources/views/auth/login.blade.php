@@ -32,139 +32,274 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!--[if IE]>
     <style>
-        .login-box-body{
+        .login-box-body {
             border: 1px solid #ddd;
         }
     </style>
     <![endif]-->
     <style>
-        .login-page{
-            background: #fff;
+        html {
+            height: 100%;
         }
-        .logo-login{
-            text-align: center;
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(#141e30, #243b55);
         }
-        .login-box-msg{
-            text-align: center;
-            margin-top:10px;
-            font-weight: bold;
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, .5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
         }
-        .login-box-body{
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
-        }
-        .login-logo{
-            /*margin-top: 50px;*/
-            background: #f9b638;
-            margin-bottom: 0;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
-        }
-        .login-box{
-            padding-top:50px;
-        }
-        .btn-login{
-            background: #f9b638;
+
+        .login-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
             color: #fff;
+            text-align: center;
         }
-        .btn-login:hover{
-            background: #f1ba54;
-            color:#fff;
+
+        .login-box .user-box {
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus ~ label,
+        .login-box .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #6dc234;
+            font-size: 12px;
+        }
+
+        .login-box form button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #6dc234;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            border: none;
+        }
+
+        .login-box button:hover {
+            background: #6dc234;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #6dc234;
+            0 0 25px #6dc234;
+            0 0 50px #6dc234;
+            0 0 100px #6dc234;
+        }
+
+        .login-box button span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box button span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #6dc234;);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+            50%, 100% {
+                left: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #6dc234;);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+            50%, 100% {
+                top: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #6dc234;);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+            50%, 100% {
+                right: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #6dc234;);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s
+        }
+        a{
+            color: #6dc234;
+        }
+        a:hover{
+            color: #6dc234;
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+            50%, 100% {
+                bottom: 100%;
+            }
         }
     </style>
 </head>
 <body class="hold-transition login-page">
 @if(Auth::user())
-    <script>window.location.href='/';</script>
+    <script>window.location.href = '/';</script>
 @endif
 <div class="login-box">
-    <div class="login-logo">
-        <a href="/" style="text-transform: uppercase;font-size: 30px;color:#fff;"><b>Đăng nhập</b></a>
+    <h2>Login</h2>
+    <form action="{{ url('/login') }}" method="post">
+        <div class="user-box">
+            <input type="text" name="email" required="">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+        </div>
+        <button type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+           Login
+        </button>
+
+        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+    </form>
+    <p>Nếu bạn chưa có tải khoản <a href="/register">Đăng ký</a> ngay </p>
+</div>
+
+<p class="text-danger login-box-msg">Vui lòng đăng nhập để tiếp tục!
+<?php //Hiển thị thông báo thành công?>
+@if ( Session::has('success') )
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <strong>{{ Session::get('success') }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
     </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <form action="{{ url('/login') }}" method="post">
-            <div class="form-group has-feedback">
-                <input style="padding-left: 10px;" type="text" name="email" class="form-control" placeholder="Username or Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input style="padding-left: 10px;" type="password" name="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="row">
-            {{--<div class="col-xs-8">--}}
-            {{--<div class="checkbox icheck">--}}
-            {{--<label>--}}
-            {{--<input type="checkbox" name="chk_remmember"> <span>Remember Me</span>--}}
-            {{--</label>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            <!-- /.col -->
-                <div class="col-xs-12">
-                    <button type="submit" class="btn btn-block btn-flat text-center btn-login">Sign In</button>
-                </div>
-                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                <!-- /.col -->
-            </div>
-        </form>
-        <p class="text-danger login-box-msg">Vui lòng đăng nhập để tiếp tục!
-        <?php //Hiển thị thông báo thành công?>
-        @if ( Session::has('success') )
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        <?php //Hiển thị thông báo lỗi?>
-        @if ( Session::has('error') )
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <strong>{{ Session::get('error') }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
+@endif
+<?php //Hiển thị thông báo lỗi?>
+@if ( Session::has('error') )
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <strong>{{ Session::get('error') }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </div>
+@endif
+@if ($errors->any())
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+    </div>
+    @endif
 
     </div>
     <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
+    </div>
+    <!-- /.login-box -->
 
-<!-- jQuery 3 -->
-<script src="{{ asset('default/bower_components/jquery/dist/jquery.min.js')}}"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('default/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- iCheck -->
-<script src="{{ asset('default/plugins/iCheck/icheck.min.js')}}"></script>
-<script src="{{ asset('default/dist/js/spx.js')}}?v=1"></script>
-<script>
-    $(function () {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' /* optional */
+    <!-- jQuery 3 -->
+    <script src="{{ asset('default/bower_components/jquery/dist/jquery.min.js')}}"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="{{ asset('default/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <!-- iCheck -->
+    <script src="{{ asset('default/plugins/iCheck/icheck.min.js')}}"></script>
+    <script src="{{ asset('default/dist/js/spx.js')}}?v=1"></script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
