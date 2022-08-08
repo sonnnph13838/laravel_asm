@@ -66,13 +66,15 @@
                             <th>Ảnh</th>
                             <th>Checkin-Date</th>
                             <th>Checkout-Date</th>
+                            <th>Số Ngày</th>
                             <th>Số lượng</th>
+                            <th>Thành Tiền</th>
                             <th></th>
 
                         </tr>
                                 <tr>
                                     <td>{{$room->name}}</td>
-                                    <td>{{$room->price}}</td>
+                                    <td class="price" value="{{$room->price}}" >{{$room->price}}</td>
                                     <td class="owl-carousel"style="width: 200px; height: 200px;" >
                                         <img src="{{asset('img/image.jpg')}}" alt="">
                                         <img src="{{asset('img/image1.jpg')}}" alt="">
@@ -80,10 +82,12 @@
                                         <img src="{{asset('img/image3.jpg')}}" alt=""> 
                                         <img src="{{asset('img/image4.jpg')}}" alt="">
                                     </td>
-                                    <td>{{$booking->checkin_date}}</td>
-                                    <td>{{$booking->checkout_date}}</td>
+                                    <td class="checkin" value="{{$booking->checkin_date}}">{{$booking->checkin_date}}</td>
+                                    <td class="checkout" value="{{$booking->checkout_date}}">{{$booking->checkout_date}}</td>
+                                    <td class="date"></td>
                                     <td>{{$booking->quantity}}</td>
-                                    <td><a href=""><svg version="1.1" id="Layer_1" style="margin-left: 30px" width=25px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    <td class="total"></td>
+                                    <td><a href="" ><svg version="1.1" id="Layer_1" style="margin-left: 30px" width=25px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                                         <g>
                                                             <path style="fill:#458FDE;" d="M472.575,355.877H39.425c-17.42,0-31.54-14.12-31.54-31.54V42.579c0-17.42,14.12-31.54,31.54-31.54
@@ -185,7 +189,33 @@
 @endsection
 @section('script')
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-
+    <script>
+        var d1 = document.querySelector('.checkin').innerText;
+        var d2 = document.querySelector('.checkout').innerText;
+        var price = document.querySelector('.price').innerText;
+        console.log(d1);
+        console.log(d2);
+        console.log(price);
+        let d3 = d1.split(".");
+        let d4 = d2.split(".");
+        console.log(d3);
+        console.log(d4);
+        let d5 = d4[0] - d3[0];
+        console.log(d5);
+        let d7 = 0;
+        if (d5 === 0) {
+            d7 = d4[1] - d3[1];
+        } else {
+            d8 =  30 - d3[1]  ;
+            d7 = + d4[1] +d8
+        }
+        console.log(d7)
+        var date = document.querySelector('.date');
+        date.innerHTML = d7;
+        let d10 = d7 * price;
+        var total = document.querySelector('.total');
+        total.innerHTML = d10;
+    </script>
     <script>
                 $('.owl-carousel').owlCarousel({
             loop:true,

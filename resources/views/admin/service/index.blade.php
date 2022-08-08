@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <!-- /.row -->
-                </div>
+                </div>php
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->
