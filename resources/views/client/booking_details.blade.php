@@ -61,12 +61,11 @@
 
                         </tr>
                                 <tr>
-                                    <th>{{$room->name}}</th>
-                                    <th>{{$room->price}}</th>
-                                    <th>{{$booking->checkin_date}}</th>
-                                    <th>{{$booking->checkout_date}}</th>
-                                    <th>{{$booking->adults}}
-                                    {{$booking->children}}</th>
+                                    <td>{{$room->name}}</td>
+                                    <td>{{$room->price}}</td>
+                                    <td>{{$booking->checkin_date}}</td>
+                                    <td>{{$booking->checkout_date}}</td>
+                                    <td>{{$booking->quantity}}</td>
                                 </tr>
                     </table>    
                 </div>

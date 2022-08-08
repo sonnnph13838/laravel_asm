@@ -10,7 +10,7 @@ class List_booking extends Model
 {
     use HasFactory;
     protected $table = "list_booking";
-    protected $fillable = ['id', 'id_user', 'checkin_date', 'checkout_date', 'id_service', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'id_user', 'checkin_date', 'checkout_date', 'id_service', 'quantity', 'created_at', 'updated_at'];
     public function saveNew($param = [])
     {
         $data = array_merge(

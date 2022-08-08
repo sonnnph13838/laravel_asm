@@ -35,13 +35,14 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 parallax-fade-top">
-						<div class="hero-text">Bài Viết</div>
+						<div class="hero-text">Dánh Sách Phòng Đã Đặt</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
     <section class="shoping-cart spad">
+        <h2 style="text-align:center">Danh Sách</h2>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -56,12 +57,11 @@
                             </tr>
                         @foreach ($list_book as $index =>$item) 
                             <tr>    
-                                <th>{{$index + 1}}</th>
-                                <th>{{$item->checkin_date}}</th>
-                                <th>{{$item->checkout_date}}</th>
-                                <th>{{$item->adults}}</th>
-                                <th>{{$item->children}}</th>
-                                <th><a href="{{route('booking_details', ['id' => $item->id])}}">Chi tiết</a></th>
+                                <td>{{$index + 1}}</td>
+                                <td>{{$item->checkin_date}}</td>
+                                <td>{{$item->checkout_date}}</td>
+                                <td>{{$item->quantity}}</th>
+                                <td><a href="{{route('booking_details', ['id' => $item->id])}}">Chi tiết</a></td>
                             </tr>
                         @endforeach
                     </table>
