@@ -32,7 +32,6 @@
                                     <th>Tên</th>
                                     <th>Ảnh</th>
                                     <th>Trạng Thái</th>
-                                    
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
                                     <th>
@@ -52,7 +51,7 @@
                                     <a href="{{route('banner_detail', ['id' => $item->id])}}" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href=""  class="btn btn-sm btn-danger">
+                                    <a href="{{route('banner_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

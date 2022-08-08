@@ -3,6 +3,8 @@
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+      margin-top: 100px;
+         margin-bottom: 100px;
 }
 
 #customers td, #customers th {
@@ -18,7 +20,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #6dc234;
   color: white;
 }
 </style>
@@ -26,8 +28,7 @@
 @section('content')
     <div class="section big-55-height over-hide z-bigger">
 	
-		<div class="parallax parallax-top" >
-			<img src="{{asset('img/blogban.jpg')}}" alt="" style="width:100%" height="100%">
+		<div class="parallax parallax-top" style="background-image: url('	https://ivang-design.com/thalia/img/1.jpg')">
 		</div>
 		<div class="dark-over-pages"></div>
 	

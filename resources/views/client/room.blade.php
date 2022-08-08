@@ -112,6 +112,19 @@
 			</div>					
 		</div>
 	</div>
+		<div class="section padding-bottom-smaller z-bigger background-grey over-hide">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="project-nav-wrap">
+						<div class="col d-flex justify-content-center">
+							{{$list_room->links()}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
 	
 	<div class="section background-dark over-hide">
 		<div class="container-fluid py-4">

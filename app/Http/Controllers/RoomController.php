@@ -123,4 +123,10 @@ class RoomController extends Controller
         }
         return view("client.room_detail", $this->v,);
     }
+    public function deleteRoom($id)
+    {
+        $opj = new Room();
+        $this->v['list_room'] = $opj->deleteRoom($id);
+        return back();
+    }
 }

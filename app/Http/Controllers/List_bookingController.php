@@ -34,4 +34,10 @@ class List_bookingController extends Controller
         $this->v['room'] = $opj->roomDetail($id_room);
         return view("client.booking_details", $this->v,);
     }
+    public function deleteBooking($id)
+    {
+        $opj = new List_booking();
+        $this->v['list_book'] = $opj->deleteBooking($id);
+        return back();
+    }
 }

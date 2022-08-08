@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="menu">
-            <a href="index.html">
+            <a href="{{route('Home')}}">
                 <div class="logo">
                     <img src="{{asset('img/logos/logo1.png')}}" alt="">
                 </div>

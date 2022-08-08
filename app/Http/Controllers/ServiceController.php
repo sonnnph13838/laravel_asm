@@ -69,4 +69,10 @@ class ServiceController extends Controller
             return redirect()->route($method_route, ['id' => $id]);
         }
     }
+    public function deleteService($id)
+    {
+        $opj = new Service();
+        $this->v['list_service'] = $opj->deleteService($id);
+        return back();
+    }
 }

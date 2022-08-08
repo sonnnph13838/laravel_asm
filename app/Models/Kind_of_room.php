@@ -61,4 +61,11 @@ class Kind_of_room extends Model
             ->update($dataUpdate);
         return $res;
     }
+    public function deleteKind($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }

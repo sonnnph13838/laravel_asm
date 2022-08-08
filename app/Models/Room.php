@@ -89,4 +89,11 @@ class Room extends Model
             ->update($dataUpdate);
         return $res;
     }
+    public function deleteRoom($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }

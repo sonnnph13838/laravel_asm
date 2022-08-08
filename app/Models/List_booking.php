@@ -33,4 +33,11 @@ class List_booking extends Model
         $lists = $query->first();
         return $lists;
     }
+    public function deleteBooking($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }

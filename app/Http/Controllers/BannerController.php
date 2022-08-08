@@ -27,9 +27,14 @@ class BannerController extends Controller
         $this->v['list_banner'] = $opj->loadList();
         return view("admin/banner.index", $this->v,);
     }
+    public function deleteBanner($id)
+    {
+        $opj = new Banner();
+        $this->v['list_banner'] = $opj->deleteBanner($id);
+        return back();
+    }
     public function update($id, Request $request)
     {
-
         $method_route = 'banner_detail';
         $params = [];
         $params['cols'] = $request->post();

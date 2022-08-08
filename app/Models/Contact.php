@@ -26,4 +26,11 @@ class Contact extends Model
         $res = DB::table($this->table)->insertGetId($data);
         return $res;
     }
+    public function deleteContact($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }

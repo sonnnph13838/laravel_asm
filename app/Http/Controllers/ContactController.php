@@ -34,4 +34,10 @@ class ContactController extends Controller
         }
         return view("client.contact", $this->v);
     }
+    public function deleteContact($id)
+    {
+        $opj = new Contact();
+        $this->v['list_contact'] = $opj->deleteContact($id);
+        return back();
+    }
 }
