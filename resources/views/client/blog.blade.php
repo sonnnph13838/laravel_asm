@@ -30,7 +30,7 @@
 				 @foreach ($blog as $item)
                         <div class="col-md-6 col-xl-4">
 							<div class="room-box background-white">
-								<img src="{{ asset('img/blog/bv11.jpg')}}" alt="">
+							<img id="mat_truoc_preview"src="{{ $item->image1?''.Storage::url($item->image1):'http://placehold.it/100x100' }}"alt="your image"style="max-width:100%; height:100px; margin-bottom: 10px;" class="img-responsive"/>
 								<div class="room-box-in">
 									<h6 class="">{{$item->title}}</h6>
 									<p class="mt-3">{{$item->discription}}</p>

@@ -21,7 +21,7 @@ Route::get('/login', 'Auth\LoginController@getLogin')->name('login');
 Route::post('/login', 'Auth\LoginController@postLogin');
 Route::get('/register', 'Auth\RegisterController@getRegister')->name('register');
 Route::post('/register', 'Auth\RegisterController@postRegister');
-Route::middleware(['auth'])->group(function () {
+//Route::middleware(['auth'])->group(function () {
     Route::get('/room', 'RoomController@index')->name('Kind_of_room');
     Route::get('blog', 'BlogController@index')->name('Blog');
     Route::get('about', 'AboutController@index')->name('About');
@@ -52,4 +52,9 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], 'admin/banner_add', 'BannerController@add')->name('banner_add');
     Route::get('/admin/banner_detail/{id}', 'BannerController@detail')->name('banner_detail');
     Route::post('/admin/banner_update/{id}', 'BannerController@update')->name('banner_update');
-});
+     //blog
+     Route::get('/admin/blog_list', 'BlogController@index1')->name('list_blog');
+     Route::match(['get', 'post'], 'admin/blog_add', 'BlogController@add')->name('blog_add');
+     Route::get('/admin/blog_detail/{id}', 'BlogController@detail')->name('blog_detail');
+     Route::post('/admin/blog_update/{id}', 'BlogController@update')->name('blog_update');
+//});
