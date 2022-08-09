@@ -22,9 +22,6 @@ Route::post('/login', 'Auth\LoginController@postLogin');
 Route::get('/register', 'Auth\RegisterController@getRegister')->name('register');
 Route::post('/register', 'Auth\RegisterController@postRegister');
 
-// Route::middleware(['auth'])->group(function () {
-Route::get('/', 'HomeController@index')->name('Home');
-
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/room', 'RoomController@index')->name('Kind_of_room');
@@ -63,8 +60,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/banner_delete/{id}', 'BannerController@deleteBanner')->name('banner_delete');
     Route::post('/admin/banner_update/{id}', 'BannerController@update')->name('banner_update');
 
-    // });
-
 
     //contact
     Route::get('/admin/contact_list', 'ContactController@index')->name('list_contact');
@@ -73,4 +68,11 @@ Route::middleware(['auth'])->group(function () {
     //list-booking
     Route::get('/admin/booking_list', 'List_bookingController@index')->name('list_booking');
     Route::get('/admin/booking_delete/{id}', 'List_bookingController@deleteBooking')->name('booking_delete');
+
+
+    //blog
+    Route::get('/admin/blog_list', 'BlogController@index1')->name('list_blog');
+    Route::match(['get', 'post'], 'admin/blog_add', 'BlogController@add')->name('blog_add');
+    Route::get('/admin/blog_detail/{id}', 'BlogController@detail')->name('blog_detail');
+    Route::post('/admin/blog_update/{id}', 'BlogController@update')->name('blog_update');
 });
