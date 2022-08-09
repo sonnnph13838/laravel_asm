@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 parallax-fade-top">
-					<div class="hero-text">Rooms Gallery</div>
+					<div class="hero-text">{{$room->name}}</div>
 				</div>
 			</div>
 		</div>
@@ -79,21 +79,11 @@
 							<a class="next-rooms-sync-1"></a>
 						</div>
 						<div id="rooms-sync1" class="owl-carousel">
-							<div class="item">
-								<img id="mat_truoc_preview" src="{{ $room->image?''.Storage::url($room->image):'http://placehold.it/1000x1000' }}" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive" />
-							</div>
-							<div class="item">
-								<img id="mat_truoc_preview1" src="{{ $room->image1?''.Storage::url($room->image1):'http://placehold.it/100x100' }}" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive" />
-							</div>
-							<div class="item">
-								<img id="mat_truoc_preview2" src="{{ $room->image2?''.Storage::url($room->image2):'http://placehold.it/100x100' }}" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive" />
-							</div>
-							<div class="item">
-								<img id="mat_truoc_preview3" src="{{ $room->image3?''.Storage::url($room->image3):'http://placehold.it/100x100' }}" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive" />
-							</div>
-							<div class="item">
-								<img id="mat_truoc_preview4" src="{{ $room->image4?''.Storage::url($room->image4):'http://placehold.it/100x100' }}" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive" />
-							</div>
+								<img id="mat_truoc_preview" width="100%" src="{{ $room->image?''.Storage::url($room->image):'http://placehold.it/1000x1000' }}" alt="your image"  class="img-responsive" />
+								<img id="mat_truoc_preview1" width="100%" src="{{ $room->image1?''.Storage::url($room->image1):'http://placehold.it/100x100' }}" alt="your image"  class="img-responsive" />
+								<img id="mat_truoc_preview2" width="100%" src="{{ $room->image2?''.Storage::url($room->image2):'http://placehold.it/100x100' }}" alt="your image"  class="img-responsive" />
+								<img id="mat_truoc_preview3" width="100%" src="{{ $room->image3?''.Storage::url($room->image3):'http://placehold.it/100x100' }}" alt="your image"  class="img-responsive" />
+								<img id="mat_truoc_preview4" width="100%" src="{{ $room->image4?''.Storage::url($room->image4):'http://placehold.it/100x100' }}" alt="your image"  class="img-responsive" />
 						</div>
 					</div>
 					<div class="section">
@@ -143,7 +133,9 @@
 						</div>
 					</div>
 
-					<div class="col-lg-4 order-first order-lg-last">
+					
+				</div>
+				<div class="col-lg-4 order-first order-lg-last">
 						<form action="" method="post">
 							@csrf
 							<div class="section background-dark p-4">
@@ -206,16 +198,9 @@
 
 									</div>
 								</div>
-								<div class="col-12 pt-4">
-									<input type="submit" class="booking-button">Bool now
-									{{-- <a class="booking-button" href="searc">book now</a> --}}
-								</div>
 							</div>
-
+						</form>
 					</div>
-					</form>
-				</div>
-
 			</div>
 		</div>
 	</div>
