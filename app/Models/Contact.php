@@ -10,7 +10,7 @@ class Contact extends Model
 {
     use HasFactory;
     protected $table = "contact";
-    protected $fillable = ['id', 'name', 'email', ',messages', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'name', 'email', 'messages', 'created_at', 'updated_at'];
     public function loadList($param = [])
     {
         $query = DB::table($this->table)
@@ -25,5 +25,12 @@ class Contact extends Model
         );
         $res = DB::table($this->table)->insertGetId($data);
         return $res;
+    }
+    public function deleteContact($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
     }
 }

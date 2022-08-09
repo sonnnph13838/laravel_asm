@@ -13,15 +13,6 @@ class Banner extends Model
     use HasFactory;
     protected $table = "banners";
     protected $fillable = ['id', 'name', 'image', 'status', 'created_at', 'updated_at'];
-    // public function loadList($param = [])
-    // {
-    //     $query = DB::table($this->table)
-    //         ->select($this->fillable)
-    //         ->where('id', '>', 2);
-
-    //     $lists = $query->get();
-    //     return $lists;
-    // }
     public function loadList($param = [])
     {
         $query = DB::table($this->table)
@@ -34,6 +25,13 @@ class Banner extends Model
         $query = DB::table($this->table)
             ->where('id', '=', $id);
         $lists = $query->first();
+        return $lists;
+    }
+    public function deleteBanner($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
         return $lists;
     }
     public function saveNew($param)

@@ -5,14 +5,16 @@
 
 	<div class="section big-55-height over-hide z-bigger">
 	
-		<div class="parallax parallax-top" style="background-image: url('img/explore.jpg')"></div>
+		<div class="parallax parallax-top" style="background-image: url('https://ivang-design.com/thalia/img/explore.jpg')">
+
+		</div>
 		<div class="dark-over-pages"></div>
 	
 		<div class="hero-center-section pages">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 parallax-fade-top">
-						<div class="hero-text">Our News</div>
+						<div class="hero-text">Bài Viết</div>
 					</div>
 				</div>
 			</div>
@@ -24,7 +26,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="subtitle with-line text-center mb-4">journal</div>
-					<h3 class="text-center padding-bottom-small">latest news</h3>
+					<h3 class="text-center padding-bottom-small">Mới Nhát</h3>
 				</div>
 				<div class="section clearfix"></div>
 				 @foreach ($blog as $item)
@@ -54,10 +56,9 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="project-nav-wrap">
-						<a href="#"><div class="left-nav" data-scroll-reveal="enter left move 60px over 0.9s after 0.1s">new<div class="text-on-hover">latest news</div></div></a>
-						
-						<a href="#"><div class="right-nav" data-scroll-reveal="enter right move 60px over 0.9s after 0.1s">old<div class="text-on-hover">older news</div></div></a>
-						{{$blog->links()}}
+						<div class="col d-flex justify-content-center">
+							{{$blog->links()}}
+						</div>
 					</div>
 				</div>
 			</div>

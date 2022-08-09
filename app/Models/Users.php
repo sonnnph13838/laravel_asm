@@ -15,7 +15,8 @@ class Users extends Model
 
     public function register($params)
     {
-        $data = array_merge($params['cols'],
+        $data = array_merge(
+            $params['cols'],
             ['password' => Hash::make($params['cols']['password'])]
         );
         $res = DB::table($this->table)->insert($data);

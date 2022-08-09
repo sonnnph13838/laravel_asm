@@ -1,3 +1,7 @@
+@php
+    $objUser = \Illuminate\Support\Facades\Auth::user();
+@endphp
+
 @extends('client.layout')
 @section('content')
 <!-- Primary Page Layout
@@ -167,41 +171,39 @@
 									<div class="col-12">
 										<div class="row">
 											<div class="col-12 pt-4">
-												<select name="adults" class="wide" value="@isset($request['adults']){{ $request['adults'] }}@endisset">
-													<option data-display="adults">adults</option>
+												<select name="quantity" class="wide" value="@isset($request['quantity']){{ $request['quantity'] }}@endisset">
+													<option data-display="quantity">quantity</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
 												</select>
-											</div>
-											<div class="col-12 pt-4">
-												<select name="children" class="wide" value="@isset($request['children']){{ $request['children'] }}@endisset">
-													<option data-display="children">children</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-												</select>
-											</div>
+
 										</div>
 									</div>
 									<div class="col-12 col-md-6 col-lg-12 pt-5">
-										<h6 class="color-white mb-3">Services:</h6>
-										{{-- <div class="form-group" name="id_service" value="@isset($request['id_service']){{ $request['id_service'] }}@endisset">
-										@foreach ($list_service as $item)
-										<div class="form-check">
-											<input class="form-check-input" id="show_menu" value="{{$item->id}}" type="checkbox">
-											<label class="form-check-label" for="show_menu">{{$item->name}}</label>
-										</div>
-										@endforeach --}}
-									</div>
+
 									<div>
 										<input type="hidden" name="id_user" value="1">
 										<input type="hidden" name="id_room" value="1">
 										<input type="hidden" name="id_service" value="1">
+
+											<div>
+												<input type="hidden" name="id_service" value="1">
+											<input type="hidden" name="id_user" value="{{$objUser->id}}">
+											<input type="hidden" name="id_room" value="{{$room->id}}">
+											</div>								
+									</div>
+									<div class="col-12 pt-4">
+										<input type="submit" class="booking-button" value="BOOKING">
+										{{-- <a class="booking-button" href="searc">book now</a> --}}
+
 									</div>
 								</div>
 								<div class="col-12 pt-4">
@@ -217,6 +219,7 @@
 			</div>
 		</div>
 	</div>
+
 </div>
 
 <div class="section padding-bottom over-hide">
@@ -242,6 +245,33 @@
 							<img src="img/2.svg" alt="">
 							<img src="img/3.svg" alt="">
 							<a href="rooms-gallery.html">full info</a>
+
+	
+	<div class="section padding-bottom over-hide">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-4" data-scroll-reveal="enter bottom move 50px over 0.7s after 0.2s">
+					<div class="room-box background-grey">
+						<div class="room-name">suite tanya</div>
+						<div class="room-per">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<img src="img/room3.jpg" alt="">
+						<div class="room-box-in">
+							<h5 class="">pool suite</h5>
+							<p class="mt-3">Sed ut perspiciatis unde omnis, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
+							<a class="mt-1 btn btn-primary" href="rooms-gallery.html">book from 130$</a>
+							<div class="room-icons mt-4 pt-4">
+								<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
+								<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
+								<a href="">full info</a>
+							</div>
+
 						</div>
 					</div>
 				</div>

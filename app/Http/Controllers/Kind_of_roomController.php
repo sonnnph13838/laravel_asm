@@ -72,4 +72,10 @@ class Kind_of_roomController extends Controller
             return redirect()->route($method_route, ['id' => $id]);
         }
     }
+    public function deleteKind($id)
+    {
+        $opj = new Kind_of_room();
+        $this->v['list_kind'] = $opj->deleteKind($id);
+        return back();
+    }
 }

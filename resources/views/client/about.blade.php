@@ -18,55 +18,68 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 parallax-fade-top">
-						<div class="hero-text">About Us</div>
+						<div class="hero-text">Giới Thiệu</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="section padding-top-bottom-smaller background-dark-2 over-hide">		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">	
-					<h5 class="color-grey">A new dimension of luxury.</h5>
-					<p class="color-white mt-3 mb-3"><em>our presentation, 0:48 min</em></p>
-					<a href="https://vimeo.com/54851233" class="video-button" data-fancybox><i class="fa fa-play"></i></a>
-				</div>
-			</div>
-		</div>	
-	</div>
 	
 	<div class="section padding-top-bottom over-hide">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8 align-self-center">
-					<div class="subtitle with-line text-center mb-4">a bit about us</div>
-					<h3 class="text-center padding-bottom-small">finest hotel</h3>
+					<div class="subtitle with-line text-center mb-4">Vài Điều Về Chúng Tôi</div>
+					<h3 class="text-center padding-bottom-small">Khách Sạn</h3>
 				</div>
 				<div class="section clearfix"></div>
-				<div class="col-md-4">
+				<div class="col-sm-6 col-lg-4">
 					<div class="services-box text-center">
-						<img src="img/4.svg" alt="">
-						<h5 class="mt-2">welcome drink</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/1.svg" alt="">
+						<h5 class="mt-2">Không Hút Thuốc</h5>
+						<p class="mt-3">Phòng Không Hút Thuốc</p>
+						<a class="mt-1 btn btn-primary" href="services.html">chi Tiết</a>
 					</div>
 				</div>
-				<div class="col-md-4 mt-5 mt-md-0">
+				<div class="col-sm-6 col-lg-4 mt-5 mt-sm-0">
 					<div class="services-box text-center">
-						<img src="img/5.svg" alt="">
-						<h5 class="mt-2">swimming pool</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/2.svg" alt="">
+						<h5 class="mt-2">Giường King</h5>
+						<p class="mt-3">Giường rộng rãi , sang trọng và thoải mãi.</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
-				<div class="col-md-4 mt-5 mt-md-0">
+				<div class="col-sm-6 col-lg-4 mt-5 mt-lg-0">
 					<div class="services-box text-center">
-						<img src="img/6.svg" alt="">
-						<h5 class="mt-2">food included</h5>
-						<p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+						<img src="https://ivang-design.com/thalia/img/3.svg" alt="">
+						<h5 class="mt-2">Thuê Du Thuyền</h5>
+						<p class="mt-3">Dịch vụ thuê du thuyền, sang trọng.</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="https://ivang-design.com/thalia/img/4.svg" alt="">
+						<h5 class="mt-2">Dồ Uống Free</h5>
+						<p class="mt-3">cung cấp đồ uống miễn phí</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="https://ivang-design.com/thalia/img/5.svg" alt="">
+						<h5 class="mt-2">Hồ Bơi Free</h5>
+						<p class="mt-3">Hồ bơi sang trọng</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="	https://ivang-design.com/thalia/img/6.svg" alt="">
+						<h5 class="mt-2">Thức Ăn đéo free</h5>
+						<p class="mt-3">Thức ăn sang trọng</p>
+						<a class="mt-1 btn btn-primary" href="services.html">Chi Tiết</a>
 					</div>
 				</div>
 			</div>
@@ -78,14 +91,14 @@
 			<div class="row mx-0">
 				<div class="col-xl-6 px-0">
 					<div class="img-wrap" id="rev-1">
-						<img src="img/room1.jpg" alt="">
-						<div class="text-element-over">private pool suite</div>
+						<img src="{{asset('img/home2.jpg')}}" alt="">
+						<div class="text-element-over">Phòng Có Bể Bơi</div>
 					</div>
 				</div>
 				<div class="col-xl-6 px-0 mt-4 mt-xl-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-10 col-xl-8 text-center">
-							<h3 class="text-center">Private pool suite</h3>
+							<h3 class="text-center">Phòng Có Bể Bơi</h3>
 							<p class="text-center mt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
 							<a class="mt-5 btn btn-primary" href="search.html">check availability</a>
 						</div>	
@@ -96,7 +109,7 @@
 				<div class="col-xl-6 px-0 mt-4 mt-xl-0 pb-5 pb-xl-0 align-self-center">
 					<div class="row justify-content-center">
 						<div class="col-10 col-xl-8 text-center">
-							<h3 class="text-center">Sea view suite</h3>
+							<h3 class="text-center">Phòng Có View Biển</h3>
 							<p class="text-center mt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
 							<a class="mt-5 btn btn-primary" href="search.html">check availability</a>
 						</div>	
@@ -104,8 +117,8 @@
 				</div>
 				<div class="col-xl-6 px-0 order-first order-xl-last mt-5 mt-xl-0">
 					<div class="img-wrap" id="rev-2">
-						<img src="img/room2.jpg" alt="">
-						<div class="text-element-over">sea view suite</div>
+						<img src="{{asset('img/home3.jpg')}}" alt="">
+						<div class="text-element-over">Phòng Có View Biển</div>
 					</div>
 				</div>
 			</div>
@@ -113,7 +126,7 @@
 	</div>
 	
 	<div class="section padding-top-bottom-big over-hide">
-		<div class="parallax" style="background-image: url('img/5.jpg')"></div>
+		<div class="parallax" style="background-image: url('https://ivang-design.com/thalia/img/5.jpg')"></div>
 		<div class="section z-bigger">		
 			<div class="container">
 				<div class="row justify-content-center">

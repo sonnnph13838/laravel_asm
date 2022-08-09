@@ -68,4 +68,11 @@ class Service extends Model
             ->update($dataUpdate);
         return $res;
     }
+    public function deleteService($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }

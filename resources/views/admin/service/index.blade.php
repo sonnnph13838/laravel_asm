@@ -51,7 +51,7 @@
                                             <a href="{{route('service_detail', ['id' => $item->id])}}" class="btn btn-sm btn-info">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href=""  class="btn btn-sm btn-danger">
+                                            <a href="{{route('service_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </td>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <!-- /.row -->
-                </div>
+                </div>php
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->

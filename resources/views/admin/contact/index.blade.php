@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Danh Sách Banenr</h1>
+                    <h1 class="m-0">Danh Sách Liên Hệ</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="">/ Loại Phòng</li>
+                        <li class=""></li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -23,35 +23,33 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Danh Sách Banner</h3>
+                            <h3 class="card-title">Danh Sách</h3>
                         </div>
                         <div class="card-body">
                             <table class="table tabl-stripped">
                                 <thead>
                                     <th>STT</th>
                                     <th>Tên</th>
-                                    <th>Ảnh</th>
-                                    <th>Trạng Thái</th>
+                                    <th>Email</th>
+                                    <th>messages</th>
                                     <th>Ngày Tạo</th>
                                     <th>Ngày Sửa</th>
-                                    <th>
-                                        <a href="{{route('banner_add')}}" class="btn btn-sm btn-success">Tạo mới</a>
-                                    </th>
+                                    <th></th>
                                 </thead>
                                 <tbody>
-                                   @foreach ($list_banner as $index =>$item)
+                                   @foreach ($list_contact as $index =>$item)
                                         <tr>
                                 <td>{{$index + 1}}</td>
                                 <td>{{$item->name}}</td>
-                                <td><img width="100px" src="{{asset('storage/'. $item->image)}}" alt=""></td>
-                                <td>{{ $item->status == 1 ? "Có" : "Không" }}</td>
-                                <td>{{ $item->created_at }}</td>
-                                <td>{{ $item->updated_at }}</td>
+                                <td>{{$item->email}}</td>
+                                <td>{{$item->messages}}</td>
+                                {{-- <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->discription}}</td>
+                                <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->features}}</td> --}}
+                                <td>{{$item->created_at}}</td>
+                                <td>{{$item->updated_at}}</td>
+                                
                                 <td>
-                                    <a href="{{route('banner_detail', ['id' => $item->id])}}" class="btn btn-sm btn-info">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a href="{{route('banner_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
+                                    <a href="{{route('contact_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
@@ -68,7 +66,7 @@
             <!-- /.content -->
         </div>
 <div class="col d-flex justify-content-center">
-            {{$list_banner->links()}}
+            {{$list_contact->links()}}
         </div>
         <!-- /.content-wrapper -->
     </div>

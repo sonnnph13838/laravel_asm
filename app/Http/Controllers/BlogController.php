@@ -18,4 +18,10 @@ class BlogController extends Controller
         $this->v['blog'] = $opjBlog->loadListBlog();
         return view('client.blog', $this->v);
     }
+    public function deleteBlog($id)
+    {
+        $opj = new Blog();
+        $this->v['list_blog'] = $opj->deleteBlog($id);
+        return back();
+    }
 }

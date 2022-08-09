@@ -18,4 +18,11 @@ class Blog extends Model
         $lists = $query->paginate(6);
         return $lists;
     }
+    public function deleteBlog($id)
+    {
+        $query = DB::table($this->table)
+            ->where('id', '=', $id);
+        $lists = $query->delete();
+        return $lists;
+    }
 }
