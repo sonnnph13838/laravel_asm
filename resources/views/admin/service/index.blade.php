@@ -43,7 +43,7 @@
                                     <tr>
                                         <td>{{$index + 1}}</td>
                                         <td>{{$item->name}}</td>
-                                        <td>{{$item->price}}</td>
+                                        <td>{{ number_format($item->price, 0) }} đ</td>
                                         <td>{{ $item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>{{ $item->updated_at }}</td>

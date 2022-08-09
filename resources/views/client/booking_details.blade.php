@@ -74,7 +74,8 @@
                         </tr>
                                 <tr>
                                     <td>{{$room->name}}</td>
-                                    <td class="price" value="{{$room->price}}" >{{$room->price}}</td>
+                                    <td class="price" value="{{$room->price}}" >{{ number_format($room->price, 0) }} đ</td>
+                                    <td class="price1" style="display:none" value="{{$room->price}}" >{{$room->price }}</td>
                                     <td class="owl-carousel"style="width: 200px; height: 200px;" >
                                         <img src="{{asset('img/image.jpg')}}" alt="">
                                         <img src="{{asset('img/image1.jpg')}}" alt="">
@@ -192,7 +193,7 @@
     <script>
         var d1 = document.querySelector('.checkin').innerText;
         var d2 = document.querySelector('.checkout').innerText;
-        var price = document.querySelector('.price').innerText;
+        var price = document.querySelector('.price1').innerText;
         console.log(d1);
         console.log(d2);
         console.log(price);
@@ -214,7 +215,8 @@
         date.innerHTML = d7;
         let d10 = d7 * price;
         var total = document.querySelector('.total');
-        total.innerHTML = d10;
+        total.innerHTML = (new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(d10));
+        
     </script>
     <script>
                 $('.owl-carousel').owlCarousel({

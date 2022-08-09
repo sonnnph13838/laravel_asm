@@ -1,3 +1,17 @@
+<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}" />
+<link rel="stylesheet" href="{{ asset('css/owl.theme.default.css')}}" />
+<style>
+        .owl-carousel img{
+        width: 100%;
+    }
+    .table td{
+        text-align: center;
+    }
+    .table th{
+        text-align: center;
+        
+    }
+</style>
 @extends('admin.layout')
 @section('content')
 <div class="content-wrapper">
@@ -30,8 +44,7 @@
                                 <thead>
                                     <th>STT</th>
                                     <th>Tên Phòng</th>
-                                    <th>Ảnh chính</th>
-                                    <th>Ảnh Phụ</th>
+                                    <th>Ảnh</th>
                                     <th>Giá</th>
                                     <th>Mô Tả</th>
                                     {{-- <th>Đặc Trưng</th>
@@ -45,16 +58,20 @@
                                 <tbody>
                                    @foreach ($list_room as $index =>$item)
                                         <tr>
-                                <td>{{$index + 1}}</td>
-                                <td>{{$item->name}}</td>
-                                <td><img id="mat_truoc_preview"src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
-                                <td>
-                                <img id="mat_truoc_preview"src="{{ $item->image1?''.Storage::url($item->image1):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
-                                <img id="mat_truoc_preview"src="{{ $item->image2?''.Storage::url($item->image2):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
-                                <img id="mat_truoc_preview"src="{{ $item->image3?''.Storage::url($item->image3):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
-                                <img id="mat_truoc_preview"src="{{ $item->image4?''.Storage::url($item->image4):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
-                                <td>{{$item->price}}</td>
-                                <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->discription}}</td>
+                                <td width=50px> {{$index + 1}}</td>
+                                <td width=200px>{{$item->name}}</td>
+                                <td  style="width: 200px;">
+                                <div class="owl-carousel" style="width:200px" >
+                                <img id="mat_truoc_preview"src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"alt="your image" class="img-responsive" width=100% height=50% >
+                                <img id="mat_truoc_preview"src="{{ $item->image1?''.Storage::url($item->image1):'http://placehold.it/100x100' }}"alt="your image" class="img-responsive"width=100% height=50% />
+                                <img id="mat_truoc_preview"src="{{ $item->image2?''.Storage::url($item->image2):'http://placehold.it/100x100' }}"alt="your image" class="img-responsive"width=100% height=50% />
+                                <img id="mat_truoc_preview"src="{{ $item->image3?''.Storage::url($item->image3):'http://placehold.it/100x100' }}"alt="your image" class="img-responsive"width=100% height=50% />
+                                <img id="mat_truoc_preview"src="{{ $item->image4?''.Storage::url($item->image4):'http://placehold.it/100x100' }}"alt="your image" class="img-responsive"width=100% height=50% />
+                                </div>
+                                </td>
+                                <td>{{ number_format($item->price, 0) }} đ</td>
+
+                                <td style="overflow: hidden;text-overflow: ellipsis; width:30%">{{$item->discription}}</td>
                                 <!-- <td style="overflow: hidden;text-overflow: ellipsis; width:10%">{{$item->features}}</td>
                                 <td>{{$item->status == 1 ? "Hiển Thị" : "Ẩn" }}</td> -->
                                 <!-- <td>{{$item->created_at}}</td>
@@ -87,4 +104,13 @@
         <!-- /.content-wrapper -->
     </div>
 </div>
+@endsection
+@section('script')
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script>
+                $('.owl-carousel').owlCarousel({
+            loop:true,
+            items:1,
+        })
+    </script>
 @endsection
