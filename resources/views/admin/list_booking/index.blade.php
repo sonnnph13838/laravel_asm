@@ -53,7 +53,7 @@
                                 <td>{{$item->updated_at}}</td>
                                 
                                 <td>
-                                    <a href="{{route('contact_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
+                                    <a href="{{route('booking_delete', ['id' => $item->id])}}"  class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

@@ -144,7 +144,7 @@
                                                         </g>
                                                         <g>
                                                         </svg></a>
-                                    <a href=""><svg version="1.1" id="Layer_1" style="margin-left: 20px" width=25px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    <a href="{{route('booking_delete', ['id' => $room->id])}}"><svg version="1.1" id="Layer_1" style="margin-left: 20px" width=25px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 408.759 408.759" style="enable-background:new 0 0 408.759 408.759;" xml:space="preserve">
                                             <g>
                                                 <path style="fill:#FFBE00;" d="M204.385,408.759c-58.121,0-113.675-24.868-152.418-68.227
