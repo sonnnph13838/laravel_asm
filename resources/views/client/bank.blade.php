@@ -35,26 +35,22 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <img src="{{$room->image}}" class="img-fluid" alt="...">
-            <p>Tên phòng: {{$room->name}} / Giá: {{$room->price}}</p>
-            <p>Số Lượng: {{$list_booking->quantity}}</p>
-            <p>Ngày đặt: {{$list_booking->checkin_date}}</p>
-            <p>Ngày đi: {{$list_booking->checkout_date}}</p>
-        </div>
-        <div class="col">
-
-            <form action="" method="post" enctype="multipart/form-data" class="form-floating">
+            M phải chuyển bố m trước bố m trc 99% bố m mới cho m đặt OK
+            <form action="" method="post" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="id_list_booking" value="{{$list_booking->id}}" >
-                <input type="text" name="name" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Name">
-                <p> </p>
-                <input type="text" name="address" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Address">
-                <p> </p>
-                <input type="email" name="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Email">
-                <p> </p>
-                <input type="text" name="tel" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Phone Number">
-                <p> </p>
-                <input type="submit" class="btn btn-secondary" value="Lưu">
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label">Chuyển khoản đê</label>
+                    <div class="col-md-9 col-sm-8">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img id="image" src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" alt="your image" style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-fluid" />
+                                <input type="file" name="image" accept="image/*" class="form-control-file @error('image') is-invalid @enderror" id="cmt_truoc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-danger"><a href="">Cancel</a></button>
+                <button class="btn btn-secondary" type="submit">Next</button>
             </form>
         </div>
     </div>
@@ -109,4 +105,27 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+<script src="{{ asset('default/plugins/input-mask/jquery.inputmask.js') }}"></script>
+<script src="{{ asset('default/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
+<script>
+    $(function() {
+        function readURL(input, selector) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(selector).attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#cmt_truoc").change(function() {
+            readURL(this, '#image');
+        });
+
+    });
+</script>
 @endsection

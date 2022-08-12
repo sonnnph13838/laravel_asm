@@ -35,27 +35,8 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <img src="{{$room->image}}" class="img-fluid" alt="...">
-            <p>Tên phòng: {{$room->name}} / Giá: {{$room->price}}</p>
-            <p>Số Lượng: {{$list_booking->quantity}}</p>
-            <p>Ngày đặt: {{$list_booking->checkin_date}}</p>
-            <p>Ngày đi: {{$list_booking->checkout_date}}</p>
-        </div>
-        <div class="col">
-
-            <form action="" method="post" enctype="multipart/form-data" class="form-floating">
-                @csrf
-                <input type="hidden" name="id_list_booking" value="{{$list_booking->id}}" >
-                <input type="text" name="name" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Name">
-                <p> </p>
-                <input type="text" name="address" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Address">
-                <p> </p>
-                <input type="email" name="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Email">
-                <p> </p>
-                <input type="text" name="tel" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Phone Number">
-                <p> </p>
-                <input type="submit" class="btn btn-secondary" value="Lưu">
-            </form>
+            Địt mọe xong rồi <br>
+            <button><a href="{{route("Home")}}">Trang chủ</a></button>
         </div>
     </div>
 </div>

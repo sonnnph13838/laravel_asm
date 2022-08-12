@@ -31,9 +31,12 @@ Route::get('/room_by_cate/{id_kind_of_room}', 'RoomController@roombycate')->name
 Route::middleware(['auth'])->group(function () {
     Route::get('/booked/{id_user}', 'List_bookingController@booked')->name('booked');
     Route::get('/booking_details/{id}', 'List_bookingController@bookingDetail')->name('booking_details');
-    // Route::get('/pay/{id}', 'PayController@index')->name('pay');
-    // Route::post('/pay_save/{id}', 'PayController@add')->name('pay_save');
-    Route::match(['get', 'post'], '/pay/{id}', 'PayController@index')->name('pay_add');
+    Route::match(['get', 'post'], '/pay/{id}', 'PayController@index')->name('pay');
+    Route::get('/pay_detail/{id}', 'PayController@detailPay')->name('pay_detail');
+    Route::get('/end','PayController@end')->name('end');
+    //Route::match(['get', 'post'], '/bank/{id}', 'PayController@bank')->name('bank');
+    Route::get('/bank/{id}', 'PayController@bank')->name('bank');
+    Route::post('/bank/{id}', 'PayController@saveBank')->name('save_bank');
     //admin
     Route::get('/admin', 'AdminController@index')->name('admin');
     //loai phong

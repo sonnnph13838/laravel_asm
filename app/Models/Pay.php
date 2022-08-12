@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-
-
 class Pay extends Model
 {
     use HasFactory;
@@ -33,7 +30,6 @@ class Pay extends Model
             $param['cols']
         );
         $res = DB::table($this->table)->insertGetId($data);
-        dd($res);
         return $res;
     }
     public function loadOne($id, $params = null)

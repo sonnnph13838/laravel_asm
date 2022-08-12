@@ -42,17 +42,18 @@
             <p>Ngày đi: {{$list_booking->checkout_date}}</p>
         </div>
         <div class="col">
-            <form class="form-floating" method="post">
-                <input type="text" name="name" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Name">
-                <p> </p>
-                <input type="text" name="address" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Address">
-                <p> </p>
-                <input type="email" name="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Email">
-                <p> </p>
-                <input type="text" name="tel" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Phone Number">
-                <p> </p>
-                <button type="submit" class="btn btn-secondary">Next</button>
-            </form>
+            <h4>Name: {{$list_pay->name}}</h4>
+            <p> </p>
+            <h4>Address: {{$list_pay->address}}</h4>
+            <p> </p>
+            <h4>Email: {{$list_pay->email}}</h4>
+            <p> </p>
+            <h4>Phone Number: {{$list_pay->tel}}</h4>
+            <p> </p>
+            <div class="" style="margin-top: 50px;">
+            <button class="btn btn-danger"><a href="">Cancel</a></button>
+            <button class="btn btn-secondary"><a href="{{route("bank",['id'=>request()->route('id')])}}">Next</a></button>
+            </div>
         </div>
     </div>
 </div>
