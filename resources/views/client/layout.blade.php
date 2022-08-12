@@ -106,7 +106,7 @@
                                 @if(isset($_SESION['laraval_session']))
                                 Tài khoản
                                 @else
-                                
+                              
                                 @endif
                                 <ul>
                                     <li><a href="{{route('admin')}}">Đăng nhập admin</a></li>
