@@ -54,7 +54,7 @@
                 <p> </p>
                 <input type="text" name="tel" class="form-control is-invalid" id="floatingInputInvalid" placeholder="Phone Number">
                 <p> </p>
-                <input type="submit" class="btn btn-secondary" value="Lưu">
+                <input type="submit" class="btn btn-secondary" value="Thanh Toán">
             </form>
         </div>
     </div>
