@@ -61,7 +61,7 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
 									</div>
-									<img id="mat_truoc_preview"src="{{ $item->image2?''.Storage::url($item->image2):'http://placehold.it/100x100' }}"alt="your image"style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
+									<img id="mat_truoc_preview"src="{{ $item->image2?''.Storage::url($item->image2):'http://placehold.it/100x100' }}"alt="your image" style="height:200px" class="img-responsive"/>
 									<div class="room-box-in">
 										<h5 class="">{{$item->name}}</h5>
 										<p class="mt-3" >{{$item->discription}}</p>
