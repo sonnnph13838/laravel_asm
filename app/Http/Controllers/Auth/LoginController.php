@@ -15,10 +15,11 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-    public function getLogout()
+    public function getLogout(Request $request)
     {
         Auth::logout();
-        return redirect('login');
+        $request->session()->flush();
+        return redirect('/');
     }
     public function postLogin(Request $request)
     {
@@ -38,6 +39,10 @@ class LoginController extends Controller
             $email = $request->input('email');
             $password = $request->input('password');
             if (Auth::attempt(['email' => $email, 'password' => $password])) {
+                $request->session()->put("email", ['email' => $email, 'password' => $password]);
+                if ($request->session()->has('email')) {
+                    return redirect('/');
+                }
                 return redirect('/');
             } else {
                 Session::flash('error', 'email hoac pass khong dung');

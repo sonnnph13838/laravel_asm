@@ -1,5 +1,5 @@
 @php
-    $objUser = \Illuminate\Support\Facades\Auth::user();
+$objUser = \Illuminate\Support\Facades\Auth::user();
 @endphp
 
 <!DOCTYPE html>
@@ -42,9 +42,9 @@
 
     <!-- Web Fonts 
 	================================================== -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- CSS
@@ -95,26 +95,29 @@
                     </div>
                     <div class="col-6 px-0 px-md-3 py-3 text-right">
                         <div class="lang-wrap" style="text-align: center; width:100px">
-                            @if (isset($_SESSION['laravel_session'])) 
-                            Tài Khoản
-                                <ul>
-                                    <li><a href="{{route('login')}}">Đăng Nhập</a></li>
-                                    <li><a href="{{route('register')}}">Đăng Kí</a></li>
-                                    
-                                </ul>
+                            @if (session()->has('email'))
+                            <div class="col-6 px-0 px-md-3 py-3 text-right">
+                                <div class="lang-wrap" style="text-align: center; width:100px">
+                                    Tài Khoản
+                                    <ul>
+                                        <li><a href="{{route('admin')}}">Đăng nhập admin</a></li>
+                                        <li><a href="{{route('login')}}">Cập Nhật</a></li>
+                                        <li><a href="{{route('logout')}}">Thoát</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                             @else
-                                @if(isset($_SESION['laraval_session']))
-                                Tài khoản
-                                @else
-                                {{$objUser->name}}
-                                @endif
-                                <ul>
-                                    <li><a href="{{route('admin')}}">Đăng nhập admin</a></li>
-                                    <li><a href="{{route('login')}}">Cập Nhật</a></li>
-                                    <li><a href="{{route('logout')}}">Thoát</a></li>
-                                </ul>
+                            <div class="col-6 px-0 px-md-3 py-3 text-right">
+                                <div class="lang-wrap" style="text-align: center; width:100px">
+                                    Tài Khoản
+                                    <ul>
+                                        <li><a href="{{route('login')}}">Đăng Nhập</a></li>
+                                        <li><a href="{{route('register')}}">Đăng Kí</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                             @endif
-						</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,11 +167,10 @@
                     <a href="{{route('contact')}}">Liên Hệ</a>
                 </li>
                 <li>
-                    @if(isset($_SESION['laraval_session']))   
-                    <a href="{{route('login')}}"><span>BOOKED</span></a>
-                   
+                    @if(session()->has('email'))
+                    <a href="{{route('booked', ['id_user' => $objUser->id])}}"><span>BOOKED</span></a>
                     @else
-                         <a href="{{route('booked', ['id_user' => $objUser->id])}}"><span>BOOKED</span></a>     
+                    <a href="{{route('login')}}"><span>BOOKED</span></a>
                     @endif
                 </li>
             </ul>
@@ -176,11 +178,11 @@
     </nav>
 
 
-@yield('content')
+    @yield('content')
 
 
 
-{{-- footer --}}
+    {{-- footer --}}
     <div class="section padding-top-bottom-small background-black over-hide footer">
         <div class="container">
             <div class="row">
